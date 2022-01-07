@@ -1,4 +1,0 @@
-dn: ou=Prueba,dc=javierpzh,dc=gonzalonazareno,dc=org
-objectClass: top
-objectClass: organizationalUnit
-ou: Prueba

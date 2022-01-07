@@ -183,6 +183,8 @@ Efectivamente se están ejecutando los dos contenedores, por lo que es el moment
 
 ![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/bookmedik1.png)
 
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/bookmedik1.png" />
+
 Vamos a *loguearnos* mediante las credenciales por defecto: **admin/admin**.
 
 ![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/bookmedik2.png)
