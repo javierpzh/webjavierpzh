@@ -1,0 +1,34 @@
+# -- mode: ruby --
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define :controlador do |controlador|
+    controlador.vm.box = "debian/buster64"
+    controlador.vm.hostname = "controlador"
+    controlador.vm.network :public_network,:bridge=>""
+    controlador.vm.provider "virtualbox" do |v|
+      v.memory = 2048
+      v.cpus = 2
+    end
+  end
+
+  config.vm.define :worker1 do |worker1|
+    worker1.vm.box = "debian/buster64"
+    worker1.vm.hostname = "worker1"
+    worker1.vm.network :public_network,:bridge=>""
+    worker1.vm.provider "virtualbox" do |v|
+      v.memory = 1024
+    end
+  end
+
+  config.vm.define :worker2 do |worker2|
+    worker2.vm.box = "debian/buster64"
+    worker2.vm.hostname = "worker2"
+    worker2.vm.network :public_network,:bridge=>""
+    worker2.vm.provider "virtualbox" do |v|
+      v.memory = 1024
+    end
+  end
+
+end

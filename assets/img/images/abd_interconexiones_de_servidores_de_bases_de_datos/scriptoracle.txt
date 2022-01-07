@@ -1,0 +1,15 @@
+create table Empleados
+(
+NIF VARCHAR(9),
+Nombre VARCHAR(150),
+AnyoNacimiento NUMERIC(4),
+Cod_Tienda VARCHAR(6),
+CONSTRAINT pk_NIF PRIMARY KEY(NIF)
+);
+
+
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678A','Rodrigo Fernandez','1974','000001');
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678B','Cristina Perez','1976','000002');
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678C','Ramon Fuentes','1983','000003');
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678D','Maria Diaz','1969','000004');
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678E','Alejandro Cortes','1978','000005');

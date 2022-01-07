@@ -1,0 +1,33 @@
+#SERVIDOR 1
+
+create table Tiendas
+(
+Codigo VARCHAR(6),
+Nombre VARCHAR(20),
+Especialidad VARCHAR(10),
+Localizacion VARCHAR(40),
+CONSTRAINT pk_Codigo PRIMARY KEY(Codigo)
+);
+
+insert into Tiendas(Codigo,Nombre,Especialidad,Localizacion) values ('000001','Javi s Pet','Animales','Sevilla');
+insert into Tiendas(Codigo,Nombre,Especialidad,Localizacion) values ('000002','Javi s Sport','Deportes','Cordoba');
+insert into Tiendas(Codigo,Nombre,Especialidad,Localizacion) values ('000003','Javi s Food','Comida','Granada');
+insert into Tiendas(Codigo,Nombre,Especialidad,Localizacion) values ('000004','Javi s Technology','Tecnologia','Cadiz');
+insert into Tiendas(Codigo,Nombre,Especialidad,Localizacion) values ('000005','Javi s Clothes','Ropa','Huelva');
+
+#SERVIDOR 2
+
+create table Empleados
+(
+NIF VARCHAR(9),
+Nombre VARCHAR(150),
+AnyoNacimiento NUMERIC(4),
+Cod_Tienda VARCHAR(6),
+CONSTRAINT pk_NIF PRIMARY KEY(NIF)
+);
+
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678A','Rodrigo Fernandez','1974','000001');
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678B','Cristina Perez','1976','000002');
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678C','Ramon Fuentes','1983','000003');
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678D','Maria Diaz','1969','000004');
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678E','Alejandro Cortes','1978','000005');
