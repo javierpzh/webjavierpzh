@@ -1,0 +1,51 @@
+create table Tiendas
+(
+Codigo VARCHAR(6),
+Nombre VARCHAR(20),
+Especialidad VARCHAR(10),
+Localizacion VARCHAR(40),
+CONSTRAINT pk_Codigo PRIMARY KEY(Codigo)
+);
+
+create table Empleados
+(
+NIF VARCHAR(9),
+Nombre VARCHAR(150),
+AnyoNacimiento NUMERIC(4),
+Cod_Tienda VARCHAR(6),
+CONSTRAINT pk_NIF PRIMARY KEY(NIF),
+CONSTRAINT fk_CodigoTienda FOREIGN KEY(Cod_Tienda) REFERENCES Tiendas(Codigo)
+);
+
+create table Productos
+(
+Codigo VARCHAR(6),
+Nombre VARCHAR(20),
+Tipo VARCHAR(15),
+Descripcion VARCHAR(60),
+Precio NUMERIC(4),
+Cod_Tienda VARCHAR(6),
+CONSTRAINT pk_Codigo2 PRIMARY KEY(Codigo),
+CONSTRAINT fk_CodigoTienda2 FOREIGN KEY(Cod_Tienda) REFERENCES Tiendas(Codigo)
+);
+
+
+insert into Tiendas(Codigo,Nombre,Especialidad,Localizacion) values ('000001','Javi s Pet','Animales','Sevilla');
+insert into Tiendas(Codigo,Nombre,Especialidad,Localizacion) values ('000002','Javi s Sport','Deportes','Cordoba');
+insert into Tiendas(Codigo,Nombre,Especialidad,Localizacion) values ('000003','Javi s Food','Comida','Granada');
+insert into Tiendas(Codigo,Nombre,Especialidad,Localizacion) values ('000004','Javi s Technology','Tecnologia','Cadiz');
+insert into Tiendas(Codigo,Nombre,Especialidad,Localizacion) values ('000005','Javi s Clothes','Ropa','Huelva');
+
+
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678A','Rodrigo Fernandez','1974','000001');
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678B','Cristina Perez','1976','000002');
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678C','Ramon Fuentes','1983','000003');
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678D','Maria Diaz','1969','000004');
+insert into Empleados (NIF,Nombre,AnyoNacimiento,Cod_Tienda) values ('12345678E','Alejandro Cortes','1978','000005');
+
+
+insert into Productos (Codigo,Nombre,Tipo,Descripcion,Precio,Cod_Tienda) values ('AAAAAA','Correa de paseo','Paseo','Correa de perro para dar paseos','10','000001');
+insert into Productos (Codigo,Nombre,Tipo,Descripcion,Precio,Cod_Tienda) values ('BBBBBB','Chandal Espanya','Futbol','Chandal oficial de la seleccion española de futbol','90','000002');
+insert into Productos (Codigo,Nombre,Tipo,Descripcion,Precio,Cod_Tienda) values ('CCCCCC','Pollo asado','Carne','Pollo asado a fuego lento','8','000003');
+insert into Productos (Codigo,Nombre,Tipo,Descripcion,Precio,Cod_Tienda) values ('DDDDDD','Laptop Study','Portatil','Ordenador portatil marca Javi s','750','000004');
+insert into Productos (Codigo,Nombre,Tipo,Descripcion,Precio,Cod_Tienda) values ('EEEEEE','Sudadera Rosa','Sudadera','Sudadera rosa de niña','30','000005');

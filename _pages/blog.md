@@ -3,9 +3,9 @@ layout: home
 ---
 
 <div class="container max-w-screen-md py-24 md:py-28 mx-auto px-4 sm:px-6 lg:px-8">
-    <h1 class="text-4xl font-black">Blog</h1>
+    <h1 class="text-4xl font-black">Bienvenidos a mi blog personal</h1>
     <p class="content-text text-lg mt-6">
-    You can write your blog intro here
+    
     </p>
   <ul class="mt-12">
     {%- for post in site.posts -%}
@@ -16,7 +16,7 @@ layout: home
       </h2>
       <div class="mt-6 post-content">{{ post.excerpt }}</div>
       <div class="mt-10">
-        <a class="text-blue-500 uppercase text-sm tracking-wide font-black content-link" href="{{ post.url | relative_url }}">Read More</a>
+        <a class="text-blue-500 uppercase text-sm tracking-wide font-black content-link" href="{{ post.url | relative_url }}">Leer más</a>
       </div>
     </li>
     <hr class="w-full bg-gray-100 my-12" style="height: 1px;">

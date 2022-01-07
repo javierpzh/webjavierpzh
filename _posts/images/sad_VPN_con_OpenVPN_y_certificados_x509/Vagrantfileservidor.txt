@@ -1,0 +1,25 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "debian/buster64"
+
+  config.vm.define :servidor do |servidor|
+    servidor.vm.box = "debian/buster64"
+    servidor.vm.hostname = "servidor"
+    servidor.vm.network "public_network",
+                use_dhcp_assigned_default_route: true ,
+                bridge:""
+    servidor.vm.network "private_network",
+                ip: "192.168.100.10",
+                virtualbox__intnet: "Intranet"
+  end
+  config.vm.define :cliente do |cliente|
+    cliente.vm.box = "debian/buster64"
+    cliente.vm.hostname = "clienteinterno"
+    cliente.vm.network "private_network",
+                ip: "192.168.100.20",
+                virtualbox__intnet: "Intranet"
+  end
+end

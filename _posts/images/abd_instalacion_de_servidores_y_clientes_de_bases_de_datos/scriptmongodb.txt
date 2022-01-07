@@ -1,0 +1,134 @@
+db.Empleados.insertOne(
+...   {
+...     DNI: "12345678A",
+...     Nombre: "Rodrigo Fernandez",
+...     AnyoNacimiento: "1974",
+...     Telefono: "656920518"
+...   }
+... )
+
+
+db.Empleados.insertOne(
+...   {
+...     DNI: "12345678B",
+...     Nombre: "Cristina Perez",
+...     AnyoNacimiento: "1976",
+...     Telefono: "690376182"
+...   }
+... )
+
+db.Empleados.insertOne(
+...   {
+...     DNI: "12345678C",
+...     Nombre: "Ramon Fuentes",
+...     AnyoNacimiento: "1983",
+...     Telefono: "630106229"
+...   }
+... )
+
+db.Empleados.insertOne(
+...   {
+...     DNI: "12345678D",
+...     Nombre: "Maria Diaz",
+...     AnyoNacimiento: "1969",
+...     Telefono: "678230172"
+...   }
+... )
+
+db.Empleados.insertOne(
+...   {
+...     DNI: "12345678E",
+...     Nombre: "Alejandro Cortes",
+...     AnyoNacimiento: "1978",
+...     Telefono: "653429921"
+...   }
+... )
+
+--------------------------------------------------------------------------------
+
+db.Productos.insertOne(
+...   {
+...     Nombre: "Javi s Phone 1",
+...     Tipo: "Telefono",
+...     Descripcion: "4,7 Pulgadas, Procesador 4 nucleos, 2 GB RAM",
+...     precio: 175
+...   }
+... )
+
+db.Productos.insertOne(
+...   {
+...     Nombre: "Javi s Phone 2",
+...     Tipo: "Telefono",
+...     Descripcion: "5,8 Pulgadas, Procesador 6 nucleos, 4 GB RAM",
+...     precio: 390
+...   }
+... )
+
+db.Productos.insertOne(
+...   {
+...     Nombre: "Javi s Phone 3",
+...     Tipo: "Telefono",
+...     Descripcion: "6,1 Pulgadas, Procesador 8 nucleos, 6 GB RAM",
+...     precio: 600
+...   }
+... )
+
+db.Productos.insertOne(
+...   {
+...     Nombre: "Javi s PC 1",
+...     Tipo: "Ordenador",
+...     Descripcion: "15,7 Pulgadas, Procesador 6 nucleos 12 hilos, 16 GB RAM",
+...     precio: 950
+...   }
+... )
+
+db.Productos.insertOne(
+...   {
+...     Nombre: "Javi s PC 2",
+...     Tipo: "Ordenador",
+...     Descripcion: "13,7 Pulgadas, Procesador 4 nucleos 8 hilos, 8 GB RAM",
+...     precio: 450
+...   }
+... )
+
+--------------------------------------------------------------------------------
+
+db.Estudios.insertOne(
+...   {
+...     TipoInnovacion: "Desbloqueo por ojo",
+...     GastosAprox: 500000,
+...     Descripcion: "Intento de desarrollar un software capaz de desbloquear dispositivos mediante el ojo"
+...   }
+... )
+
+db.Estudios.insertOne(
+...   {
+...     TipoInnovacion: "6G",
+...     GastosAprox: 2800000,
+...     Descripcion: "Intento de desarrollar la tecnologia 6G"
+...   }
+... )
+
+db.Estudios.insertOne(
+...   {
+...     TipoInnovacion: "Desbloqueo por voz",
+...     GastosAprox: 1300000,
+...     Descripcion: "Intento de desarrollar un software capaz de desbloquear dispositivos mediante la voz"
+...   }
+... )
+
+db.Estudios.insertOne(
+...   {
+...     TipoInnovacion: "Portatil con liquida",
+...     GastosAprox: 5400000,
+...     Descripcion: "Intento de desarrollar un ordenador portatil que sea enfriado mediante una refrigeracion liquida"
+...   }
+... )
+
+db.Estudios.insertOne(
+...   {
+...     TipoInnovacion: "Carga solar",
+...     GastosAprox: 17200000,
+...     Descripcion: "Intento de desarrollar un software capaz de cargar los dispositivos mediante la luz solar"
+...   }
+... )

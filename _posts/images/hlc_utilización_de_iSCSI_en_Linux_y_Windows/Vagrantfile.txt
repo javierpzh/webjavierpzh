@@ -1,0 +1,36 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure("2") do |config|
+
+  disco1iSCSI = '.vagrant/disco1iSCSI.vdi'
+  disco2iSCSI = '.vagrant/disco2iSCSI.vdi'
+  disco3iSCSI = '.vagrant/disco3iSCSI.vdi'
+
+  config.vm.define :servidor do |servidor|
+    servidor.vm.box = "debian/buster64"
+    servidor.vm.hostname = "servidor"
+    servidor.vm.network :public_network, :bridge=>""
+
+    servidor.vm.provider :virtualbox do |v|
+      v.customize ["createhd", "--filename", disco1iSCSI, "--size", 1024]
+      v.customize ["storageattach", :id, "--storagectl", "SATA Controller", "--port", 1, "--device", 0, "--type", "hdd", "--medium", disco1iSCSI]
+    end
+
+    servidor.vm.provider :virtualbox do |v|
+      v.customize ["createhd", "--filename", disco2iSCSI, "--size", 1024]
+      v.customize ["storageattach", :id, "--storagectl", "SATA Controller", "--port", 2, "--device", 0, "--type", "hdd", "--medium", disco2iSCSI]
+    end
+
+    servidor.vm.provider :virtualbox do |v|
+      v.customize ["createhd", "--filename", disco3iSCSI, "--size", 1024]
+      v.customize ["storageattach", :id, "--storagectl", "SATA Controller", "--port", 3, "--device", 0, "--type", "hdd", "--medium", disco3iSCSI]
+    end
+
+  end
+
+  config.vm.define :clientelinux do |clientelinux|
+    clientelinux.vm.box = "debian/buster64"
+    clientelinux.vm.hostname = "clientelinux"
+    clientelinux.vm.network :public_network, :bridge=>""
+  end
+end
