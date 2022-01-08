@@ -1,5 +1,7 @@
 # This script uploads the changes to the repository in only one command
 
+#!/bin/bash
+
 echo " --> Adding changes"
 git add .
 read -p " -->	Enter the message of the commit: " nameCommit
