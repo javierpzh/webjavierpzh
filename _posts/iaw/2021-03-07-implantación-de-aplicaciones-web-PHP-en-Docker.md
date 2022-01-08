@@ -181,13 +181,11 @@ aef84a1160f0        mariadb                  "docker-entrypoint.s…"   5 minute
 
 Efectivamente se están ejecutando los dos contenedores, por lo que es el momento de a acceder a la dirección `127.0.0.1:8080`:
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/bookmedik1.png)
-
 <img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/bookmedik1.png" />
 
 Vamos a *loguearnos* mediante las credenciales por defecto: **admin/admin**.
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/bookmedik2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/bookmedik2.png" />
 
 ¡Bien! Vemos como nos muestra la aplicación *BookMedik* por lo que habríamos finalizado este apartado.
 
@@ -339,11 +337,11 @@ Efectivamente se están ejecutando los dos contenedores, y podemos observar, com
 
 Es el momento de a acceder a la dirección `127.0.0.1:8080`:
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/phpbookmedik1.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/phpbookmedik1.png" />
 
 Vamos a *loguearnos* mediante las credenciales por defecto: **admin/admin**.
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/phpbookmedik2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/phpbookmedik2.png" />
 
 ¡Bien! Vemos como nos sigue mostrando la aplicación *BookMedik*, pero ahora está ejecutándose en un contenedor creado a partir de una imagen distinta, en esta caso, la oficial de PHP.
 
@@ -550,7 +548,7 @@ Creating bookmedik-php ... done
 
 Es el momento de a acceder a la dirección `127.0.0.1:8080`:
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/403.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/403.png" />
 
 Aún no he conseguido solventar este problema.
 
@@ -675,19 +673,19 @@ Creating prestashop       ... done
 
 Es el momento de a acceder a la dirección `127.0.0.1:8080`:
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/prestashop1.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/prestashop1.png" />
 
 Podemos ver como nos muestra el instalador de *Prestashop*.
 
 Conectamos la aplicación al contenedor que se encuentra ejecutando la base de datos:
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/prestashop2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/prestashop2.png" />
 
 Y terminada la instalación, podremos ver nuestro CMS listo:
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/prestashop3.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/prestashop3.png" />
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/prestashop4.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/prestashop4.png" />
 
 Para finalizar, vamos a destruir los contenedores y los volveremos a generar, para ver como seguimos poseyendo la información:
 
@@ -703,9 +701,9 @@ Creating prestashop       ... done
 
 Accedemos de nuevo a la dirección `127.0.0.1:8080`:
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/prestashop5.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/prestashop5.png" />
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/prestashop4.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/prestashop4.png" />
 
 ¡Bien! Podemos ver como nuestra aplicación sigue manteniendo los datos de nuestra tienda, por lo que habría terminado el proceso.
 
@@ -780,18 +778,18 @@ Creating drupal-mysql ... done
 
 Es el momento de a acceder a la dirección `127.0.0.1:8080`:
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/drupal1.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/drupal1.png" />
 
 Podemos ver como nos muestra el instalador de *Drupal*, por lo que continuamos el proceso indicando las credenciales de nuestra base de datos:
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/drupal2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/drupal2.png" />
 
 Esperamos que terminen de instalarse los distintos componentes de *Drupal*:
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/drupal3.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/drupal3.png" />
 
 Y terminada la instalación, ya podríamos disfruta de nuestro CMS:
 
-![.](images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/drupal4.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_implantación_de_aplicaciones_web_PHP_en_Docker/drupal4.png" />
 
 ¡Bien! Ya habríamos terminado de desplegar *Drupal* en contenedores *Docker*, y con ello este apartado y también el *post* en sí.
