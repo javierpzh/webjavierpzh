@@ -285,15 +285,15 @@ Vemos que hemos restaurado la copia de seguridad correctamente.
 
 Por último nos faltaría crear un registro **CNAME**, para que nos muestre esta paǵina, en nuestra zona DNS del servidor **OVH**. En mi caso, como destino pongo `vpsjavierpzh.iesgn15.es` en vez de una dirección IP, ya que tengo creado un registro de tipo **A** que apunta a esta IP.
 
-![.](images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/cnamecrear.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/cnamecrear.png" />
 
 Lo creamos:
 
-![.](images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/cnamecreado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/cnamecreado.png" />
 
 Si accedemos a la dirección `portal.iesgn15.es`:
 
-![.](images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/drupalovh.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/drupalovh.png" />
 
 **5. Asegúrate que las URL limpias de *Drupal* siguen funcionando en *Nginx*.**
 
@@ -309,7 +309,7 @@ location / {
 
 Se puede ver como efectivamente la URL de la aplicación `portal.iesgn15.es`.
 
-![.](images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/drupalovh.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/drupalovh.png" />
 
 
 ### Instalación / migración de la aplicación Nextcloud
@@ -448,7 +448,7 @@ Mi entorno de desarrollo se trata de una máquina virtual *Vagrant*, por tanto p
 
 Si nos dirigimos al navegador a la dirección `www.jpnextcloud.com` nos muestra:
 
-![.](images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudmvfaltan.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudmvfaltan.png" />
 
 Vemos que *Nextcloud* necesita una serie de extensiones *PHP*. Para instalar todas las extensiones necesarias:
 
@@ -458,15 +458,15 @@ apt install php-{mysql,zip,curl,mbstring,xml,gd} -y
 
 Si probamos a entrar ahora a la dirección `www.jpnextcloud.com` nos muestra:
 
-![.](images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudmvinstalador.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudmvinstalador.png" />
 
 Introducimos los datos del administrador y de nuestra base de datos en el instalador y comenzará la instalación de *Nextcloud*.
 
-![.](images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudmvinstalando.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudmvinstalando.png" />
 
 Una vez finalizado el proceso podemos ver como ya hemos instalado esta aplicación web con *Apache*.
 
-![.](images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudmvinstalado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudmvinstalado.png" />
 
 **2. Realiza la migración al servidor en producción, para que la aplicación sea accesible en la URL: `www.iesgnXX.es/cloud`**
 
@@ -739,7 +739,7 @@ systemctl restart nginx
 
 Accedemos a la dirección `http://www.iesgn15.es/cloud/` y obtenemos este resultado:
 
-![.](images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudovhmal.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudovhmal.png" />
 
 Esto es porque tanto el fichero de configuración del virtualhost *Nextcloud*, como el fichero `.../(nextcloud)/config/config.php` no están bien configurados:
 
@@ -891,11 +891,11 @@ $CONFIG = array (
 
 Si probamos de nuevo a acceder a `http://www.iesgn15.es/cloud/`:
 
-![.](images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudovh.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudovh.png" />
 
 Vemos que ya podemos *loguearnos* correctamente. Si accedemos con nuestro usuario:
 
-![.](images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudovhdentro.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudovhdentro.png" />
 
 **3. Instala en un ordenador el cliente de *Nextcloud* y realiza la configuración adecuada para acceder a "tu nube".**
 
@@ -917,7 +917,7 @@ Si abrimos la aplicación de escritorio y seguimos estos pasos:
 
 Y ya habríamos terminado de configurar *Nextcloud Client*.
 
-![.](images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudclient.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_migracion_de_aplicaciones_web_PHP/nextcloudclient.png" />
 
 Si vemos el contenido de la carpeta `/home/javier/Nextcloud`:
 

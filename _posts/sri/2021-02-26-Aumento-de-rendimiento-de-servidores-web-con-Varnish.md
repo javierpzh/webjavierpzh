@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-Aumento de rendimiento de servidores web con Varnish
-Date: 2021/02/26
-Category: Servicios de Red e Internet
-Header_Cover: theme/images/banner-servicios.jpg
-Tags: Nginx, PHP_FPM, Varnish
 
 En este artículo vamos a ver como podemos aumentar el rendimiento de nuestro servidor web con **Varnish**.
 
@@ -27,7 +22,7 @@ ab -t 10 -c 200 -k http://172.22.x.x/wordpress/index.php
 
 Después de hacer muchas pruebas de rendimiento con un número variable de peticiones concurrentes (1, 10, 25, 50, 75, 100, 250, 500, 1000) y distintas direcciones del *Wordpress*, los resultados obtenidos son los siguientes:
 
-![.](images/sri_aumento_de_rendimiento_de_servidores_web_con_Varnish/grafica.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_aumento_de_rendimiento_de_servidores_web_con_Varnish/grafica.png" />
 
 **NOTA:** No es importante el número concreto de peticiones/segundo. Puede variar por muchas razones, como pueden ser:
 
@@ -129,15 +124,15 @@ nodo1                      : ok=17   changed=14   unreachable=0    failed=0
 
 Terminado el proceso, automáticamente tendremos listo nuestro servidor web, en la dirección IP especificada. En mi caso es la *192.168.0.35*, por lo que si me dirijo al navegador e introduzco dicha dirección me aparece la siguiente web:
 
-![.](images/sri_aumento_de_rendimiento_de_servidores_web_con_Varnish/nginx.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_aumento_de_rendimiento_de_servidores_web_con_Varnish/nginx.png" />
 
 Podemos ver como efectivamente se encuentra ejecutándose el servidor *Nginx*, pero, ¿se estará ejecutando el proceso adecuado para *Wordpress*? Para comprobarlo, vamos a añadir a nuestra dirección `/wordpress`:
 
-![.](images/sri_aumento_de_rendimiento_de_servidores_web_con_Varnish/wordpress.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_aumento_de_rendimiento_de_servidores_web_con_Varnish/wordpress.png" />
 
 Parece ser que también disponemos de nuestro *Wordpress*, así que vamos a terminar la instalación de esta nueva web y acceder a su panel de administración:
 
-![.](images/sri_aumento_de_rendimiento_de_servidores_web_con_Varnish/panelwordpress.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_aumento_de_rendimiento_de_servidores_web_con_Varnish/panelwordpress.png" />
 
 **2. Vamos a hacer las pruebas de rendimiento desde la misma máquina. Para ello, vamos a ejecutar instrucciones similares a esta:**
 

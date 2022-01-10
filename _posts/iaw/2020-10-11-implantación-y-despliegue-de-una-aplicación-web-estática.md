@@ -147,12 +147,12 @@ Como vemos ya lo hemos asociado a la rama master de nuestro [repositorio](https:
 Como he comentado antes, voy a utilizar GitHub Pages como servicio donde voy a desplegar mi web.
 Nos dirigimos al repositorio que contiene el código generado.
 
-![.](images/iaw_generacion_despliegue_web_estatica/repositorioweb.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_generacion_despliegue_web_estatica/repositorioweb.png" />
 
 Nos vamos a los ajustes(settings), y aquí buscamos la sección llamada GitHub Pages, y en ella, nos dirigimos al apartado de fuente(source) y seleccionamos la rama master de nuestro repositorio.
 Guardamos los cambios y en unos minutos tendremos generada nuestra página estática con Pelican y GitHub Pages.
 
-![.](images/iaw_generacion_despliegue_web_estatica/confgithubpages.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_generacion_despliegue_web_estatica/confgithubpages.png" />
 
 **6. Piensa algún método (script, scp, rsync, git,…) que te permita automatizar la generación de la página (integración continua) y el despliegue automático de la página en el entorno de producción, después de realizar un cambio de la página en el entorno de desarrollo. Muestra al profesor un ejemplo de como al modificar la página se realiza la puesta en producción de forma automática.**
 

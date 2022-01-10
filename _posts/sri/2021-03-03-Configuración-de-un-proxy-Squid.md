@@ -1,15 +1,10 @@
 ---
 layout: post
 ---
-Configuración de un proxy Squid
-Date: 2021/03/03
-Category: Servicios de Red e Internet
-Header_Cover: theme/images/banner-squid.jpg
-Tags: Proxy, Squid
 
 En este artículo vamos a instalar un *proxy* **Squid** para configurar nuestro cliente para que acceda a internet por medio de este *proxy*.
 
-El escenario en el que vamos a trabajar, está definido en este [Vagrantfile](images/sri_Configuración_de_un_proxy_Squid/Vagrantfile.txt).
+El escenario en el que vamos a trabajar, está definido en este [Vagrantfile](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_Configuración_de_un_proxy_Squid/Vagrantfile.txt).
 
 
 #### Instalación
@@ -107,7 +102,7 @@ tail -f /var/log/squid/access.log
 
 Para configurar el *proxy* en nuestro navegador, en mi caso, explicaré como es el proceso en **Firefox**, nos dirigimos a **Preferencias**, y en el apartado **General**, al final nos aparece una sección llamada **Configuración de red**, dentro de su configuración podremos establecer manualmente nuestro *proxy*.ç
 
-![.](images/sri_Configuración_de_un_proxy_Squid/proxyfirefox.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_Configuración_de_un_proxy_Squid/proxyfirefox.png" />
 
 Establecido el *proxy* vamos a probar a acceder a diferentes webs como pueden ser [javierpzh.github.io](https://javierpzh.github.io/), [www.youtube.com](https://www.youtube.com) y [www.google.com](https://www.google.com/).
 
@@ -137,15 +132,15 @@ Ahora, vamos a configurar nuestra máquina para que haga uso del *proxy Squid*, 
 
 Para ello, antes, vamos a dirigirnos de nuevo a la configuración del navegador, a la parte de la configuración del *proxy* e indicaremos que use la configuración *proxy* del sistema.
 
-![.](images/sri_Configuración_de_un_proxy_Squid/proxyfirefox2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_Configuración_de_un_proxy_Squid/proxyfirefox2.png" />
 
 Hecho esto, tendremos que configurar el sistema para que por defecto utilice nuestro *proxy*. Este proceso lo realizaremos en el apartado **Configuración del sistema**, en la sección de **Red**:
 
-![.](images/sri_Configuración_de_un_proxy_Squid/configuracionred.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_Configuración_de_un_proxy_Squid/configuracionred.png" />
 
 Configuraremos el *proxy* de manera manual de la siguiente manera:
 
-![.](images/sri_Configuración_de_un_proxy_Squid/configuracionredproxy.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_Configuración_de_un_proxy_Squid/configuracionredproxy.png" />
 
 Con esto habríamos terminado de configurar nuestro sistema para que utilice el *proxy Squid*.
 
@@ -332,11 +327,11 @@ tail -f /var/log/squid/access.log
 
 En mi caso, sigo teniendo establecida la configuración del *proxy*, de manera que vamos a probar a acceder a [www.facebook.com](https://www.facebook.com/).
 
-![.](images/sri_Configuración_de_un_proxy_Squid/facebook.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_Configuración_de_un_proxy_Squid/facebook.png" />
 
 Vemos que no nos permite acceder a la web, por lo que, parece que el funcionamiento es el correcto, pero ahora, voy a probar a acceder a cualquier otra web, para asegurarme que el *proxy* solo esté bloqueando la conexión a *Facebook* y no a todas las webs. Intento acceder a [www.amazon.es](https://www.amazon.es/):
 
-![.](images/sri_Configuración_de_un_proxy_Squid/amazon.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_Configuración_de_un_proxy_Squid/amazon.png" />
 
 Una vez comprobamos que a ésta sí nos permite acceder, vamos a revisar el proceso que dejamos en ejecución en nuestra terminal:
 
@@ -445,11 +440,11 @@ tail -f /var/log/squid/access.log
 
 En mi caso, sigo teniendo establecida la configuración del *proxy*, de manera que vamos a probar a acceder a [javierpzh.github.io](https://javierpzh.github.io/).
 
-![.](images/sri_Configuración_de_un_proxy_Squid/mipagina.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_Configuración_de_un_proxy_Squid/mipagina.png" />
 
 Vemos que nos permite acceder a la web, por lo que, de momento el funcionamiento es el correcto, pero ahora, para terminar de comprobarlo, voy a probar a acceder a cualquier otra web, para asegurarme que el *proxy* esté bloqueando cualquier tipo de conexión que no sea a mi web. Intento acceder a [www.amazon.es](https://www.amazon.es/):
 
-![.](images/sri_Configuración_de_un_proxy_Squid/amazon2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_Configuración_de_un_proxy_Squid/amazon2.png" />
 
 Una vez comprobamos que a ésta web no nos permite acceder, vamos a revisar el proceso que dejamos en ejecución en nuestra terminal:
 

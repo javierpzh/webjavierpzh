@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-Control de acceso, autentificación y autorización
-Date: 2020/10/31
-Category: Servicios de Red e Internet
-Header_Cover: theme/images/banner-servicios.jpg
-Tags: web, Apache
 
 ## Control de acceso
 
@@ -390,21 +385,21 @@ Con esto lo que estamos haciendo es:
 
     - Si accedemos a `departamentos.iesgn.org/internet/`:
 
-    ![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/anfitrioninternet.png)
+    <img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/anfitrioninternet.png" />
 
     - Si accedemos a `departamentos.iesgn.org/intranet/`:
 
-    ![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/anfitrionintranet.png)
+    <img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/anfitrionintranet.png" />
 
 - **Máquina cliente:** permitirle el acceso a la página `departamentos.iesgn.org/intranet/`.
 
     - Si accedemos a `departamentos.iesgn.org/internet/`:
 
-    ![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/mvinternet.png)
+    <img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/mvinternet.png" />
 
     - Si accedemos a `departamentos.iesgn.org/intranet/`:
 
-    ![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/mvintranet.png)
+    <img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/mvintranet.png" />
 
 
 **2. Autentificación básica. Limita el acceso a la URL `departamentos.iesgn.org/secreto`. Comprueba las cabeceras de los mensajes HTTP que se intercambian entre el servidor y el cliente. ¿Cómo se manda la contraseña entre el cliente y el servidor?. Entrega una breve explicación del ejercicio.**
@@ -455,23 +450,23 @@ systemctl restart apache2
 
 Si ahora probamos a acceder a `departamentos.iesgn.org/secreto`:
 
-![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/autenticacion.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/autenticacion.png" />
 
 Vemos que nos pide que iniciemos sesión ya que el contenido está protegido. Vamos a ver que puede pasar:
 
 - Iniciamos sesión correctamente:
 
-![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/autenticacioncompleta.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/autenticacioncompleta.png" />
 
 - No iniciamos sesión o de manera incorrecta:
 
-![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/autenticacionfallida.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/autenticacionfallida.png" />
 
 A primera vista podemos creer que este método de autenticación es segura, pero aún no he comentado el gran fallo que tiene. ¿Qué es lo último que deseamos cuando nos *logueamos* en una web? Exacto, que nuestras credenciales y nuestros datos no se conozcan y sean seguros, pues la **autenticación básica** no cuida esto, sino que envía nuestras contraseñas sin ningún tipo de cifrado y al descubierto, por lo que estamos totalmente expuestos.
 
 He hecho una prueba capturando el tráfico, en la que podemos ver como cualquiera que esté escuchando el tráfico de la red, podría ver nuestros datos.
 
-![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/wiresharkautenticacionbasica.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/wiresharkautenticacionbasica.png" />
 
 Si nos fijamos en la línea seleccionada, que hace referencia a la petición que hemos hecho con nuestras credenciales, podemos ver como nos muestra la contraseña.
 
@@ -519,23 +514,23 @@ systemctl restart apache2
 
 Si ahora probamos a acceder a `departamentos.iesgn.org/secreto`:
 
-![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/autenticacionhtdigest.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/autenticacionhtdigest.png" />
 
 Vemos que nos pide que iniciemos sesión ya que el contenido está protegido. Vamos a ver que puede pasar:
 
 - Iniciamos sesión correctamente:
 
-![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/autenticacioncompletahtdigest.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/autenticacioncompletahtdigest.png" />
 
 - No iniciamos sesión o de manera incorrecta:
 
-![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/autenticacionfallida.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/autenticacionfallida.png" />
 
 Antes vimos que la **autenticación básica** no era segura, vamos a ver si la **autenticación digest** lo es.
 
 He hecho una prueba capturando el tráfico.
 
-![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/wiresharkautenticaciondigest.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/wiresharkautenticaciondigest.png" />
 
 Si nos fijamos en la línea seleccionada, que hace referencia a la petición que hemos hecho con nuestras credenciales, podemos ver como no nos muestra la contraseña como pasaba anteriormente.
 
@@ -568,8 +563,8 @@ Si ahora probamos a acceder a `departamentos.iesgn.org/secreto`:
 
 - **Máquina anfitrión:**
 
-    ![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/internetaccesomedianteautentificacion.png)
+    <img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/internetaccesomedianteautentificacion.png" />
 
 - **Máquina cliente:**
 
-    ![.](images/sri_control_de_acceso_autenticacion_y_autorizacion/intranetaccesodirecto.png)
+    <img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_control_de_acceso_autenticacion_y_autorizacion/intranetaccesodirecto.png" />

@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-OpenStack: Cortafuegos
-Date: 2021/01/31
-Category: Seguridad y Alta Disponibilidad
-Header_Cover: theme/images/banner-seguridad.jpg
-Tags: OpenStack, Cortafuegos, nftables
 
 Vamos a construir un cortafuegos en **Dulcinea** que nos permita controlar el tráfico de nuestra red. El cortafuegos que vamos a construir debe funcionar tras un reinicio.
 

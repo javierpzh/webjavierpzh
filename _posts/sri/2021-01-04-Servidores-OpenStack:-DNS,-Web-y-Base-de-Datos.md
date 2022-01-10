@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-Servidores OpenStack: DNS, Web y Base de Datos
-Date: 2021/01/04
-Category: Servicios de Red e Internet
-Header_Cover: theme/images/banner-servicios.jpg
-Tags: OpenStack, bind9, Apache, MySQL, MariaDB
 
 En este *post* vamos a realizar la instalación de tres servidores: DNS, Web y Base de Datos. Estos servidores se encontrarán en el escenario de OpenStack montado en artículos anteriores. Si quieres saber más acerca del escenario, puedes visitar los siguientes *posts*:
 
@@ -534,7 +529,7 @@ Created symlink /etc/systemd/system/multi-user.target.wants/httpd.service → /u
 
 Hecho esto, si nos dirigimos nuestro navegador e introducimos la dirección `www.javierpzh.gonzalonazareno.org`, nos debe aparecer una página como esta:
 
-![.](images/sri_Servidores_OpenStack_DNS_Web_y_Base_de_Datos/quijoteapache.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_Servidores_OpenStack_DNS_Web_y_Base_de_Datos/quijoteapache.png" />
 
 Vemos que accediendo a `www.javierpzh.gonzalonazareno.org` nos muestra la página servida por nuestro servidor web, que se encuentra en *Quijote*, por lo que, tanto la regla *DNAT* creada en *Dulcinea*, como el servidor *httpd*, funcionan correctamente.
 
@@ -602,7 +597,7 @@ systemctl restart httpd
 
 Y accedemos de nuevo a la dirección `www.javierpzh.gonzalonazareno.org`:
 
-![.](images/sri_Servidores_OpenStack_DNS_Web_y_Base_de_Datos/quijoteapachevirtualhost.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_Servidores_OpenStack_DNS_Web_y_Base_de_Datos/quijoteapachevirtualhost.png" />
 
 Vemos como nos muestra el nuevo *virtualhost*.
 
@@ -637,7 +632,7 @@ En la ruta `/var/www/iesgn` voy a crear un archivo llamado `info.php` que conten
 
 Si accedemos a la dirección `www.javierpzh.gonzalonazareno.org/info.php`:
 
-![.](images/sri_Servidores_OpenStack_DNS_Web_y_Base_de_Datos/quijoteapachephpinfo.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_Servidores_OpenStack_DNS_Web_y_Base_de_Datos/quijoteapachephpinfo.png" />
 
 Vemos como nuestro servidor ejecuta código *PHP*, por lo que habríamos terminado.
 

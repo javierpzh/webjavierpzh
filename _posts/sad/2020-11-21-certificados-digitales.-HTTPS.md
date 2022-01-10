@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-Certificados digitales. HTTPS
-Date: 2020/11/21
-Category: Seguridad y Alta Disponibilidad
-Header_Cover: theme/images/banner-seguridad.jpg
-Tags: Criptografía, Certificado digital, HTTPS, SSL, Apache, Nginx
 
 ## Certificado digital de persona física
 
@@ -21,7 +16,7 @@ Nos dirigimos al menú de **Preferencias** del navegador, y en el apartado de **
 
 **2. Muestra una captura de pantalla donde se vea las preferencias del navegador donde se ve instalado tu certificado.**
 
-![.](images/sad_certificados_digitales_HTTPS/certinstalado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/certinstalado.png" />
 
 **3. ¿Cómo puedes hacer una copia de tu certificado? ¿Como vas a realizar la copia de seguridad de tu certificado? Razona la respuesta.**
 
@@ -33,7 +28,7 @@ En la ventana de la imagen anterior, seleccionamos nuestro certificado, y selecc
 
 Para exportar nuestra clave pública, debemos hacer doble *click* en nuestro certificado, y se nos abrirá una nueva pestaña con la información del certificado. Nos dirigimos hasta el apartado **Información de clave pública** y aquí encontraremos nuestra clave pública y ya podremos exportarla y compartirla:
 
-![.](images/sad_certificados_digitales_HTTPS/infoclavepublica.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/infoclavepublica.png" />
 
 
 #### Tarea 2: Validación del certificado
@@ -65,15 +60,15 @@ sudo dpkg -i AutoFirma_1_6_5.deb
 
 Y ya tendríamos instalado **Autofirma**. Comprobamos que lo podemos abrir:
 
-![.](images/sad_certificados_digitales_HTTPS/autofirma.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/autofirma.png" />
 
 Para validar nuestro certificado, nos dirigimos a la página de **VALIDe** y al apartado **[Validar Certificado](https://valide.redsara.es/valide/validarCertificado/ejecutar.html)**. Seleccionamos el certificado mediante el software de *Autofirma*:
 
- ![.](images/sad_certificados_digitales_HTTPS/certautofirma.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/certautofirma.png" />
 
 Seleccionamos nuestro certificado y hacemos *click* en **Validar**, y obtendremos una respuesta sobre sí el certificado es válido o no. En mi caso:
 
-![.](images/sad_certificados_digitales_HTTPS/certvalido.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/certvalido.png" />
 
 
 #### Tarea 3: Firma electrónica
@@ -84,49 +79,49 @@ Con **Autofirma**:
 
 Para firmar un documento con nuestro certificado y el programa *Autofirma*, seleccionamos **Seleccionar ficheros a firmar**:
 
-![.](images/sad_certificados_digitales_HTTPS/autofirma.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/autofirma.png" />
 
 Seleccionamos el documento que deseamos firmar:
 
-![.](images/sad_certificados_digitales_HTTPS/autofirmaseleccfichero.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/autofirmaseleccfichero.png" />
 
 Seleccionamos con que certificado queremos firmar el documento:
 
-![.](images/sad_certificados_digitales_HTTPS/autofirmaselecccert.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/autofirmaselecccert.png" />
 
 Guardamos el fichero ya firmado con nuestro certificado:
 
-![.](images/sad_certificados_digitales_HTTPS/autofirmaguardarficherofirm.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/autofirmaguardarficherofirm.png" />
 
 Vemos que ya hemos firmado y guardado el documento firmado:
 
-![.](images/sad_certificados_digitales_HTTPS/autofirmaficherofirm.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/autofirmaficherofirm.png" />
 
 Con **Valide**:
 
 Para firmar un documento con mi certificado y el programa *Valide*, nos dirigimos a la página de *VALIDe* y al apartado **[Realizar Firma](https://valide.redsara.es/valide/firmar/ejecutar.html)**.
 
-![.](images/sad_certificados_digitales_HTTPS/validepagfirmar.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/validepagfirmar.png" />
 
 Seleccionamos el documento que deseamos firmar:
 
-![.](images/sad_certificados_digitales_HTTPS/valideseleccfichero.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/valideseleccfichero.png" />
 
 Seleccionamos con que certificado queremos firmar el documento:
 
-![.](images/sad_certificados_digitales_HTTPS/valideselecccert.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/valideselecccert.png" />
 
 Vemos que ya hemos firmado el documento pero aún no lo hemos guardado en nuestro equipo:
 
-![.](images/sad_certificados_digitales_HTTPS/valideficherofirm.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/valideficherofirm.png" />
 
 Guardamos el fichero ya firmado con nuestro certificado:
 
-![.](images/sad_certificados_digitales_HTTPS/valideguardarficherofirm.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/valideguardarficherofirm.png" />
 
 Vemos que ya hemos firmado y guardado el documento firmado:
 
-![.](images/sad_certificados_digitales_HTTPS/valideficherofirmyguardado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/valideficherofirmyguardado.png" />
 
 Ya dispongo de los documentos firmados, llamados `documentofirmadoautofirma.txt_signed.csig` y `documentofirmadovalide.txt.csig`, y se lo envío a mi compañero [Álvaro](https://www.instagram.com/whosalvr/).
 
@@ -138,15 +133,15 @@ Con **Autofirma**:
 
 En el programa *Autofirma* seleccionamos la opción **Ver firma**:
 
-![.](images/sad_certificados_digitales_HTTPS/autofirmaverificarfirma.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/autofirmaverificarfirma.png" />
 
 Seleccionamos el fichero del cuál queremos ver la firma:
 
-![.](images/sad_certificados_digitales_HTTPS/autofirmaverificarfirmaseleccfichero.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/autofirmaverificarfirmaseleccfichero.png" />
 
 Nos sale que está firmado por Álvaro:
 
-![.](images/sad_certificados_digitales_HTTPS/autofirmafirmaverificada.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/autofirmafirmaverificada.png" />
 
 Con **Valide**:
 
@@ -154,17 +149,17 @@ Para verificar la firma de un documento y el programa *Valide*, nos dirigimos a 
 
 Seleccionamos el fichero del cuál queremos ver la firma:
 
-![.](images/sad_certificados_digitales_HTTPS/valideverificarfirma.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/valideverificarfirma.png" />
 
 Nos sale que también está firmado por Álvaro:
 
-![.](images/sad_certificados_digitales_HTTPS/validefirmaverificada.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/validefirmaverificada.png" />
 
 **3. Entre dos compañeros, firmar los dos un documento, verificar la firma para comprobar que está firmado por los dos.**
 
 Tanto yo como Álvaro hemos firmado el mismo documento, por tanto si verificamos la firma de éste:
 
-![.](images/sad_certificados_digitales_HTTPS/autofirmafirmadelosdosverificada.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/autofirmafirmadelosdosverificada.png" />
 
 Vemos que sale firmado por ambos.
 
@@ -177,23 +172,23 @@ Voy a intentar consultar mis trámites abiertos en el Ministerio de Educación, 
 
 Me dirijo a la web llamada **[Sede Electrónica](https://sede.educacion.gob.es/portada.html)**, y aquí indico que deseo acceder a mis trámites:
 
-![.](images/sad_certificados_digitales_HTTPS/sedeelectronica.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/sedeelectronica.png" />
 
 Vemos que tenemos distintas posibilidades para identificarnos, yo selecciono **Clave**:
 
-![.](images/sad_certificados_digitales_HTTPS/sedeelectronicaacceso.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/sedeelectronicaacceso.png" />
 
 En esta ventana selecciono **Certificado Electrónico**.
 
-![.](images/sad_certificados_digitales_HTTPS/sedeelectronicacertdigital.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/sedeelectronicacertdigital.png" />
 
 Como tengo instalado mi certificado en este navegador, me lo reconoce automáticamente y me pregunta si quiero acceder:
 
-![.](images/sad_certificados_digitales_HTTPS/sedeelectronicaverificacion.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/sedeelectronicaverificacion.png" />
 
 Le digo que sí y automáticamente nos hemos identificado con nuestra certificado digital y nos proporciona la siguiente información:
 
-![.](images/sad_certificados_digitales_HTTPS/sedeelectronicapag.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/sedeelectronicapag.png" />
 
 Podemos ver que hemos accedido correctamente y podemos ver la solicitud de mi beca por ejemplo, y que en la parte inferior nos sale un mensaje que nos indica que he accedido mediante clave (certificado digital).
 
@@ -514,7 +509,7 @@ Lo primero que debemos hacer, como estamos trabajando en el *cloud*, es decir, e
 
 Lo abro:
 
-![.](images/sad_certificados_digitales_HTTPS/puerto443.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/puerto443.png" />
 
 Hecho esto, tenemos que almacenar los ficheros *.crt* y *.pem* en la ruta `/etc/ssl/certs/`, por tanto los movemos:
 
@@ -599,19 +594,19 @@ Ya tendríamos nuestro sitio web configurado para que utilice *https* pero en nu
 
 Para instalar el certificado en nuestro navegador, *Firefox* en mi caso, nos dirigimos a **Preferencias**, a la sección **Privacidad & Seguridad**, y al apartado **Certificados**, *clickamos* en **Ver certificados** y nos sale una ventana como esta:
 
-![.](images/sad_certificados_digitales_HTTPS/importar.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/importar.png" />
 
 Seleccionamos **Importar ...**, e importamos el fichero *cacert.pem*:
 
-![.](images/sad_certificados_digitales_HTTPS/caalvaroconfiar.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/caalvaroconfiar.png" />
 
 Ya hemos importado el certificado de la entidad de Álvaro:
 
-![.](images/sad_certificados_digitales_HTTPS/caalvaroinstalado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/caalvaroinstalado.png" />
 
 Si ahora nos dirigimos a la dirección `javierpzh.iesgn.org`:
 
-![.](images/sad_certificados_digitales_HTTPS/httpsapache.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/httpsapache.png" />
 
 Vemos que nos ha redirigido automáticamente por *https* y además podemos ver como tenemos la confianza de la entidad de Álvaro.
 
@@ -682,6 +677,6 @@ systemctl restart nginx.service
 
 En el navegador nos introducimos la dirección `javierpzh.iesgn.org`:
 
-![.](images/sad_certificados_digitales_HTTPS/httpsnginx.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_certificados_digitales_HTTPS/httpsnginx.png" />
 
 Vemos que nos ha redirigido automáticamente por *https* y además podemos ver como tenemos la confianza de la entidad de Álvaro, esta vez utilizando un servidor web *Nginx*.

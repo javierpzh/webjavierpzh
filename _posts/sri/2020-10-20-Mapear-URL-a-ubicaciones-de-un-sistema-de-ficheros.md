@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-Mapear URL a ubicaciones de un sistema de ficheros
-Date: 2020/10/20
-Category: Servicios de Red e Internet
-Header_Cover: theme/images/banner-servicios.jpg
-Tags: mapear, web, Apache
 
 - **[Alias](http://httpd.apache.org/docs/2.4/mod/mod_alias.html#alias): Un alias me permite servir ficheros que no se encuentran en el `DocumentRoot`.**
 
@@ -144,11 +139,11 @@ systemctl restart apache2
 
 Si accedemos a `www.mapeo.com` (que nos redirige a `www.mapeo.com/principal`), nos muestra esta salida del sitio web.
 
-![.](images/sri_mapear_url_a_ubicaciones_de_un_sistema_de_ficheros/indexes.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_mapear_url_a_ubicaciones_de_un_sistema_de_ficheros/indexes.png" />
 
 Podemos acceder e inspeccionar el contenido de los archivos:
 
-![.](images/sri_mapear_url_a_ubicaciones_de_un_sistema_de_ficheros/fichero1.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_mapear_url_a_ubicaciones_de_un_sistema_de_ficheros/fichero1.png" />
 
 **3. Si accedes a la página `www.mapeo.com/principal/documentos` se visualizarán los documentos que hay en `/home/usuario/doc`. Por lo tanto se permitirá el listado de fichero y el seguimiento de enlaces simbólicos siempre que el propietario del enlace y del fichero al que apunta sean el mismo usuario. Explica bien y pon una prueba de funcionamiento donde se vea bien el seguimiento de los enlaces simbólicos.**
 
@@ -208,11 +203,11 @@ Vemos como hemos cambiado el propietario de la carpeta, y en este punto solo nos
 
 Si accedemos a `www.mapeo.com` (que nos redirige a `www.mapeo.com/principal`), nos muestra esta salida del sitio web.
 
-![.](images/sri_mapear_url_a_ubicaciones_de_un_sistema_de_ficheros/ejercicio3.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_mapear_url_a_ubicaciones_de_un_sistema_de_ficheros/ejercicio3.png" />
 
 Vemos que nos muestra un directorio `documentos`, y si accedemos a él:
 
-![.](images/sri_mapear_url_a_ubicaciones_de_un_sistema_de_ficheros/documentos.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_mapear_url_a_ubicaciones_de_un_sistema_de_ficheros/documentos.png" />
 
 Observamos que tenemos acceso a él y a sus archivos.
 
@@ -248,10 +243,10 @@ systemctl restart apache2
 
 Si introducimos una ruta que no existe, nos sale este error 404:
 
-![.](images/sri_mapear_url_a_ubicaciones_de_un_sistema_de_ficheros/noexiste.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_mapear_url_a_ubicaciones_de_un_sistema_de_ficheros/noexiste.png" />
 
 Vemos que sale el archivo html que hemos configurado para este error. Para el error 403, es decir, cuando intentamos acceder a una ruta a la que no tenemos permisos suficientes:
 
-![.](images/sri_mapear_url_a_ubicaciones_de_un_sistema_de_ficheros/sinpermiso.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_mapear_url_a_ubicaciones_de_un_sistema_de_ficheros/sinpermiso.png" />
 
 Nos muestra este error.

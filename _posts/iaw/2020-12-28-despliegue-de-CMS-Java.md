@@ -58,7 +58,7 @@ apt install tomcat9 -y
 
 Para comprobar el funcionamiento de una forma más visual, podemos conectarnos desde un navegador web mediante la dirección IP de la máquina especificando el puerto **8080**:
 
-![.](images/iaw_despliegue_de_CMS_Java/tomcat8080.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_CMS_Java/tomcat8080.png" />
 
 Vemos que está funcionando correctamente.
 
@@ -102,7 +102,7 @@ Me he dado cuenta, que al cambiarle el nombre, el fichero `.war` vuelve a genera
 
 Hecho esto, vamos a probar a acceder a la dirección `192.168.200.20:8080/guacamole`:
 
-![.](images/iaw_despliegue_de_CMS_Java/guacamole8080.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_CMS_Java/guacamole8080.png" />
 
 Vemos que podemos acceder a la aplicación.
 
@@ -196,10 +196,10 @@ resolución estática:
 
 Nos dirigimos a nuestro navegador e introducimos la dirección `www.guacamole-javierpzh.com`:
 
-![.](images/iaw_despliegue_de_CMS_Java/proxyinverso.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_CMS_Java/proxyinverso.png" />
 
 Hacemos *click* para dirigirnos al enlace:
 
-![.](images/iaw_despliegue_de_CMS_Java/guacamoleapache.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_CMS_Java/guacamoleapache.png" />
 
 Ya estaríamos viendo nuestra aplicación servida por nuestro servidor web *Apache*, por lo que habríamos terminado con el *post*.

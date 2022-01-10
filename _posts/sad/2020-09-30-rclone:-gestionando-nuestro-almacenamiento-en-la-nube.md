@@ -1,13 +1,6 @@
 ---
 layout: post
 ---
-rclone - Gestionando nuestro almacenamiento en la nube
-Date: 2020/09/30
-Category: Seguridad y Alta Disponibilidad
-Header_Cover: theme/images/banner-seguridad.jpg
-Tags: rclone
-
-## rclone
 
 **Tarea 1: Instala rclone en tu equipo.**
 
@@ -133,7 +126,7 @@ q) Quit config
 e/n/d/r/c/s/q>
 </pre>
 
-![.](images/sad_rclone/dropboxañadido.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_rclone/dropboxañadido.png" />
 
 Ya tenemos Dropbox configurado con nuestra cuenta, ahora vamos a configurar Google Drive que en mi caso es el que me interesa más.
 
@@ -247,7 +240,7 @@ e/n/d/r/c/s/q> q
 root@debian:~#
 </pre>
 
-![.](images/sad_rclone/googledriveañadido.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_rclone/googledriveañadido.png" />
 
 Hemos terminado de configurar nuestra cuenta de Google Drive, por tanto ya tenemos los dos proveedores que queríamos.
 
@@ -270,13 +263,13 @@ También podemos listar las carpetas, algo que es mucho más legible:
 rclone lsd dropbox:
 </pre>
 
-![.](images/sad_rclone/carpetasdropbox.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_rclone/carpetasdropbox.png" />
 
 <pre>
 rclone lsd googledrive:
 </pre>
 
-![.](images/sad_rclone/carpetasgoogledrive.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_rclone/carpetasgoogledrive.png" />
 
 Para copiar un fichero local a la nube:
 
@@ -287,7 +280,7 @@ rclone copy /home/javier/Escritorio/pruebarclone.txt dropbox:/rclone/
 Si quisiéramos copiar un fichero de la nube a local, simplemente ponemos la ruta del fichero en la nube en primer lugar, seguido del directorio local.
 Aquí muestro como creo el fichero `pruebarclone.txt` y justo después lo añado a mi carpeta rclone de Dropbox:
 
-![.](images/sad_rclone/copiarficherolocal.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_rclone/copiarficherolocal.png" />
 
 Para sincronizar un directorio local con la nube, utilizamos el siguiente comando:
 
@@ -298,7 +291,7 @@ rclone sync -P /home/javier/Imágenes dropbox:/rclone/
 Hay que decir que la opción 'sync' modifica únicamente el destino.
 Aquí podemos apreciar como se han sincronizado todos los datos.
 
-![.](images/sad_rclone/sincdirectoriolocal.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_rclone/sincdirectoriolocal.png" />
 
 Ahora vamos a ver como se copian ficheros entre los dos proveedores cloud que hemos configurado. Por ejemplo, vamos a copiar el archivo png `carpetasdropbox.png` que es una imagen, a la carpeta rclone de Google Drive (esta carpeta no existe, por tanto la vamos a crear también):
 
@@ -310,7 +303,7 @@ rclone mkdir googledrive:/rclone
 rclone copy dropbox:/rclone/carpetasdropbox.png googledrive:/rclone
 </pre>
 
-![.](images/sad_rclone/sincdropboxgoogledrive.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_rclone/sincdropboxgoogledrive.png" />
 
 Aquí podemos ver como efectivamente hemos copiado la imagen de Dropbox a Google Drive.
 
@@ -320,7 +313,7 @@ También podemos sincronizar una carpeta de Dropbox con una de Google Drive. Voy
 rclone sync -P dropbox:/rclone/ googledrive:/rclone/
 </pre>
 
-![.](images/sad_rclone/sinccarpetadropboxgoogledrive.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_rclone/sinccarpetadropboxgoogledrive.png" />
 
 **Tarea 4: Monta en un directorio local de tu ordenador, los ficheros de un proveedor cloud. Comprueba que copiando o borrando ficheros en este directorio se crean o eliminan en el proveedor.**
 
@@ -330,8 +323,8 @@ Voy a montar la carpeta 'prueba' de mi Google Drive en mi escritorio, para ello:
 rclone mount --allow-non-empty googledrive:/prueba/ /home/javier/Escritorio/
 </pre>
 
-![.](images/sad_rclone/terminal1procesocarpetamontada.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_rclone/terminal1procesocarpetamontada.png" />
 
 Ahora mismo en esa terminal se queda ejecutándose ese proceso y hace que la carpeta 'prueba' se monte en mi escritorio local y se sincronicen automáticamente. Lo podemos ver en la siguiente imagen, en la que hago cambios en local y en remoto y lo compruebo.
 
-![.](images/sad_rclone/carpetamontadagoogledrive.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_rclone/carpetamontadagoogledrive.png" />

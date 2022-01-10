@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-Instalación de un servidor LEMP
-Date: 2020/11/9
-Category: Servicios de Red e Internet
-Header_Cover: theme/images/banner-servicios.jpg
-Tags: LEMP, Linux, Nginx, MySQL, MariaDB, PHP, OVH
 
 ## Instalación de un servidor LEMP
 
@@ -128,23 +123,23 @@ Ya tendríamos instalado nuestro servidor de aplicaciones *PHP*.
 Vamos a crear un nuevo sitio web al que se accederá mediante la dirección `www.iesgn15.es`. Antes de empezar la configuración de *Nginx*, vamos a añadir un registro **CNAME** en nuestra **nuestra zona DNS de OVH**.
 Para realizar este paso, nos dirigimos a nuestra zona DNS de OVH:
 
-![.](images/sri_instalacion_de_un_servidor_LEMP/zonadnsovh.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_instalacion_de_un_servidor_LEMP/zonadnsovh.png" />
 
 Una vez aquí, antes de crear el nuevo registro tenemos que eliminar el registro existente que hace uso del subdominio `www.iesgn15.es`. Este registro no lo he creado yo, sino que venía por defecto, y además es un registro de tipo **TXT**, es decir que no es importante y no afectará a ningún servicio, por tanto lo eliminamos:
 
-![.](images/sri_instalacion_de_un_servidor_LEMP/borrartxtpordefecto.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_instalacion_de_un_servidor_LEMP/borrartxtpordefecto.png" />
 
 Una vez tenemos el subdominio que queremos libre y utilizable, procedemos a crear el nuevo registro como se puede ver en la siguiente imagen:
 
-![.](images/sri_instalacion_de_un_servidor_LEMP/cnameconfiguracion.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_instalacion_de_un_servidor_LEMP/cnameconfiguracion.png" />
 
 Vemos como nos avisa que vamos a crear un registro de tipo **CNAME**, cuyo dominio será **www.iesgn15.es** y su destino va a ser **vpsjavierpzh.iesgn15.es.** . Es importante no olvidar este último punto final si queremos utilizar la notación absoluta. Este destino que hemos añadido, correspondería a la dirección IP del servidor, lo que pasa es que en mi servidor tengo creado un registro de tipo **A** que apunta a esta dirección IP, por tanto hago uso de este registro. Por último, podemos apreciar que nos advierte que este cambio puede tardar en ser efectivo hasta 24 horas, así que no debemos preocuparnos si al instante no obtenemos el resultado obtenido.
 
-![.](images/sri_instalacion_de_un_servidor_LEMP/cnamecrear.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_instalacion_de_un_servidor_LEMP/cnamecrear.png" />
 
 Ya hemos creado el nuevo registro:
 
-![.](images/sri_instalacion_de_un_servidor_LEMP/cnamecreado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_instalacion_de_un_servidor_LEMP/cnamecreado.png" />
 
 Una vez hemos realizado las modificaciones necesarias en la configuración del servidor, podemos pasar a configurar *Nginx*.
 
@@ -330,7 +325,7 @@ chown -R www-data:www-data /srv/
 
 Accedemos a la [página](http://www.iesgn15.es).
 
-![.](images/sri_instalacion_de_un_servidor_LEMP/wwwiesgn15es.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_instalacion_de_un_servidor_LEMP/wwwiesgn15es.png)
 
 Además de visualizar la nueva web, es importante fijarse en la URL y apreciar que nos ha realizado la redirección a la página `/principal`, como configuramos en el paso anterior.
 
@@ -402,6 +397,6 @@ chown -R www-data:www-data /srv/
 
 Si nos dirigimos a la página `www.iesgn15.es/principal/info.php`:
 
-![.](images/sri_instalacion_de_un_servidor_LEMP/infophp.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_instalacion_de_un_servidor_LEMP/infophp.png" />
 
 Esto significa que hemos configurado correctamente *PHP*.

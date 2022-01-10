@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-RAID5: Gestión del almacenamiento de la información
-Date: 2020/09/30
-Category: Seguridad y Alta Disponibilidad
-Header_Cover: theme/images/banner-seguridad.jpg
-Tags: raid
 
 ## Ejercicio: RAID 5
 
@@ -35,7 +30,7 @@ mdadm -C /dev/md5 --level=raid5 --raid-devices=3 /dev/sdb /dev/sdc /dev/sdd
 
 Aquí vemos que se ha creado correctamente:
 
-![.](images/sad_raid5/raid5.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/raid5.png" />
 
 Hay que decir que aquí no he añadido un hot spare, es decir un disco de repuesto, por lo que si alguno de los 3 discos se estropeara, tendríamos que sacarlo y añadir uno nuevo manualmente. Si quisiéramos añadirlo desde un principio, que sería lo mejor, es tan simple como añadir un dispositivo más en el comando para crear el RAID.
 
@@ -46,7 +41,7 @@ Las diferencias que hay entre un RAID1 y un RAID5 principalmente son que el RAID
 
 En la siguiente imagen podemos ver el estado del RAID, la cantidad de discos que lo componen (3), la capacidad ocupada, libre y total del RAID (2GB), nos muestra los dispositivos que presentan algún fallo (0), si disponemos de discos de repuesto...
 
-![.](images/sad_raid5/informacionraid5.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/informacionraid5.png" />
 
 Si queremos mirar solo el estado del RAID, también podemos hacerlo con este comando:
 
@@ -54,7 +49,7 @@ Si queremos mirar solo el estado del RAID, también podemos hacerlo con este com
 cat /proc/mdstat
 </pre>
 
-![.](images/sad_raid5/comprobarestadoraid.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/comprobarestadoraid.png" />
 
 
 
@@ -73,7 +68,7 @@ Para crear un volumen físico:
 pvcreate /dev/md5
 </pre>
 
-![.](images/sad_raid5/crearvolfisico.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/crearvolfisico.png" />
 
 Ahora tendríamos que crear el grupo de volúmenes al que va a pertenecer:
 
@@ -81,7 +76,7 @@ Ahora tendríamos que crear el grupo de volúmenes al que va a pertenecer:
 vgcreate testing /dev/md5
 </pre>
 
-![.](images/sad_raid5/creargrupodevol.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/creargrupodevol.png" />
 
 Y ahora sí, podemos crear el volumen lógico de 500MB que deseábamos:
 
@@ -91,7 +86,7 @@ lvcreate testing -L 500M -n vollogico1
 
 El parámetro `-L` indica la cantidad de almacenamiento y el parámetro `-n` el nombre o identificación.
 
-![.](images/sad_raid5/crearvollogico_lsblk.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/crearvollogico_lsblk.png" />
 
 
 **Tarea 4: Formatea ese volumen con un sistema de archivos xfs.**
@@ -110,7 +105,7 @@ mkfs.xfs /dev/testing/vollogico1
 
 Podemos comprobar que se ha establecido el sistema de archivos XFS, haciendo un `lsblk -f`.
 
-![.](images/sad_raid5/comprobarsisarchxfs.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/comprobarsisarchxfs.png" />
 
 **Tarea 5: Monta el volumen en el directorio /mnt/raid5 y crea un fichero. ¿Qué tendríamos que hacer para que este punto de montaje sea permanente?**
 
@@ -128,19 +123,19 @@ mount -t xfs /dev/testing/vollogico1 /mnt/raid5
 
 Haciendo un `lsblk` podemos ver como se ha montado correctamente:
 
-![.](images/sad_raid5/montarvolumen.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/montarvolumen.png" />
 
 Ahora vamos a crear un fichero para mostrar que está bien montado y nos deja utilizarlo.
 
-![.](images/sad_raid5/crearfichero.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/crearfichero.png" />
 
 Para hacer que se monte automáticamente y de manera permanente, hay que modificar el archivo 'fstab', hay que añadir una línea con estos datos:
 
-![.](images/sad_raid5/fstab.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/fstab.png" />
 
 Ahora que hemos modificado y guardado el archivo 'fstab', vamos a reiniciar la máquina y comprobar que se monta automáticamente.
 
-![.](images/sad_raid5/rebootlsblk.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/rebootlsblk.png" />
 
 Vemos que funciona como queremos y se monta de manera automática en el directorio /mnt/raid5 .
 
@@ -154,12 +149,12 @@ mdadm --manage /dev/md5 --fail /dev/sdd
 
 Aquí muestro el estado del RAID y como efectivamente, el disco aparece estropeado(f).
 
-![.](images/sad_raid5/fallodisco.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/fallodisco.png" />
 
 Respondiendo a la pregunta de si podemos acceder al fichero, antes de enseñarlo, ya respondo que sí, ya que en el RAID 5, si se estropea un disco, al haber paridad y redundancia de datos, no perdemos el acceso al sistema, lo único que perdemos es la seguridad ante el posible fallo de un segundo disco.
 Aquí vemos como podemos acceder al fichero (que no muestra nada porque está vacío):
 
-![.](images/sad_raid5/fichero.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/fichero.png" />
 
 **Tarea 7: Una vez marcado como estropeado, lo tenemos que retirar del raid.**
 
@@ -171,7 +166,7 @@ mdadm -r /dev/md5 /dev/sdd
 
 Comprobamos que se ha retirado y así es.
 
-![.](images/sad_raid5/retirardisco.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/retirardisco.png" />
 
 **Tarea 8: Imaginemos que lo cambiamos por un nuevo disco nuevo (el dispositivo de bloque se llama igual), añádelo al array y comprueba como se sincroniza con el anterior.**
 
@@ -181,11 +176,11 @@ Para añadir un disco, en este caso el /dev/sde , el comando es igual que el ant
 mdadm -a /dev/md5 /dev/sde
 </pre>
 
-![.](images/sad_raid5/sincronizacion.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/sincronizacion.png" />
 
 Aquí vemos como lo hemos añadido exitosamente y como de manera instantánea empieza a sincronizarse con los otros discos, este proceso dura apenas unos segundos, obviamente no tenemos datos para que tarde más, tardará dependiendo el almacenamiento a sincronizar.
 
-![.](images/sad_raid5/postsincronizacion.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/postsincronizacion.png" />
 
 Ya ha terminado la sincronización y está actuando como un disco normal, el reemplazamiento ha sido exitoso.
 
@@ -197,7 +192,7 @@ Vamos a añadir un nuevo disco que se identifica como /dev/sdf . Este disco va a
 mdadm -a /dev/md5 /dev/sdf
 </pre>
 
-![.](images/sad_raid5/hotspare.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/hotspare.png" />
 
 Vemos como se configura como hot spare.
 Producimos un fallo en un disco para ver como actúa en caso de emergencia.
@@ -206,11 +201,11 @@ Producimos un fallo en un disco para ver como actúa en caso de emergencia.
 mdadm --manage /dev/md5 --fail /dev/sde
 </pre>
 
-![.](images/sad_raid5/actuacionhotspare.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/actuacionhotspare.png" />
 
 Vemos que sin tener que indicar nada, él automáticamente empieza a sincronizarse con los discos principales.
 
-![.](images/sad_raid5/hotsparesincronizado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/hotsparesincronizado.png" />
 
 Ya ha terminado la sincronización y ha reemplazado al disco estropeado.
 
@@ -222,7 +217,7 @@ Lo primero que debemos hacer es agrandar el volumen lógico. Como nos dice que l
 lvresize -l +100%FREE /dev/testing/vollogico1
 </pre>
 
-![.](images/sad_raid5/agrandandovollogico1.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/agrandandovollogico1.png" />
 
 Nos manda un mensaje que nos dice que ahora poseemos prácticamente 2GB de espacio, por tanto solo nos quedaría extender el sistema de archivos.
 Y ahora viene lo que de verdad es realmente ventajoso por parte de este sistema de archivos. Si nos acordamos, anteriormente, configuramos el fichero 'fstab' para que montara automáticamente el volumen, por tanto el volumen ahora mismo está montado. Otros sistemas de archivos no permiten extender el espacio sin desmontar el volumen, pero XFS a diferencia de éstos, no solo nos permite extenderlo en caliente, sino que también nos garantiza la integridad de los datos.
@@ -232,7 +227,7 @@ Para redimensionar el sistema de archivos utilizamos el siguiente comando:
 xfs_growfs /mnt/raid5/
 </pre>
 
-![.](images/sad_raid5/agrandandoxfs.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_raid5/agrandandoxfs.png" />
 
 Comprobamos que se ha extendido y que ahora el espacio total es de 2GB.
 

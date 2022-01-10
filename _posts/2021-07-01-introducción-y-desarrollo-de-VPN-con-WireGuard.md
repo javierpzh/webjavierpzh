@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-Introducción y desarrollo de VPN con WireGuard
-Date: 2021/07/01
-Category: Seguridad y Alta Disponibilidad
-Header_Cover: theme/images/banner-vpn.png
-Tags: VPN, WireGuard, Site-to-Site
 
 A día de hoy, nos encontramos con una situación de monopolio absoluto en el mundo de las VPN, liderado por **OpenVPN**, que ya todos conoceréis, o incluso habréis trabajado con él.
 He mencionado el término VPN, pero ¿qué es una VPN?
@@ -22,7 +17,7 @@ Básicamente, lo que te permite es crear una red local sin necesidad que sus int
 
 Bien, una vez conocemos lo que es una VPN y las ventajas que nos ofrece, es el momento de preguntarnos, ¿necesitamos las VPNs?
 
-![.](images/introducción_y_desarrollo_de_VPN_con_WireGuard/gráficoVPN.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/introducción_y_desarrollo_de_VPN_con_WireGuard/gráficoVPN.png" />
 
 
 ## ¿ Son necesarias las VPNs ?
@@ -51,7 +46,7 @@ Teniendo en cuenta estos aspectos, me interesé por **WireGuard**, y empecé a i
 
 Es una aplicación **multiplataforma** (Linux, Windows, macOS, Android e iOS). Se presenta como una solución más rápida y sencilla que las existentes hasta la fecha, para aquellos usuarios que necesiten o deseen hacer uso de una VPN.
 
-![.](images/introducción_y_desarrollo_de_VPN_con_WireGuard/wireguard.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/introducción_y_desarrollo_de_VPN_con_WireGuard/wireguard.png" />
 
 Nació en el año 2016, por lo que es una tecnología muy reciente, aún en desarrollo y no conocida por muchos. Está escrita por Jason A. Donenfeld en **C++** y en **Go**, y publicada bajo GPL.
 
@@ -77,7 +72,7 @@ Entre las más significativas, se encuentran las siguientes:
 
 - **Mejoras de ping:** *WireGuard* registra un tiempo de ping que es menos de la mitad del de *OpenVPN*.
 
-![.](images/introducción_y_desarrollo_de_VPN_con_WireGuard/gráficospinglatencia.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/introducción_y_desarrollo_de_VPN_con_WireGuard/gráficospinglatencia.png" />
 
 - **Configuraciones:** Las configuraciones de *WireGuard* son bastante más sencillas y rápidas de realizar que las de *OpenVPN*. Esto es debido a que en *WireGuard* las conexiones se realizan mediante pares de claves públicas-privadas, no mediante nodos centrales, como es el caso de *OpenVPN*.
 
@@ -404,7 +399,7 @@ Para los usuarios de *Windows*, *WireGuard* tiene disponible una aplicación de 
 
 A continuación, voy a mostrar una captura de pantalla en la que visualizaremos la configuración de este nuevo cliente:
 
-![.](images/introducción_y_desarrollo_de_VPN_con_WireGuard/1-W10-config.jpeg)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/introducción_y_desarrollo_de_VPN_con_WireGuard/1-W10-config.jpeg" />
 
 Antes de activar la conexión, añadiremos a nuestro servidor esta nueva sección *Peer* y lo reiniciaremos para aplicar cambios:
 
@@ -418,11 +413,11 @@ PersistentKeepAlive = 25
 
 Con el servidor listo, podremos activar el túnel desde nuestro cliente y automáticamente podremos visualizar la nueva interfaz con nuestra IP dentro de la red privada, además de poseer conexión a internet:
 
-![.](images/introducción_y_desarrollo_de_VPN_con_WireGuard/2-W10-activate.jpeg)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/introducción_y_desarrollo_de_VPN_con_WireGuard/2-W10-activate.jpeg" />
 
-![.](images/introducción_y_desarrollo_de_VPN_con_WireGuard/3-W10-direcciónIP.jpeg)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/introducción_y_desarrollo_de_VPN_con_WireGuard/3-W10-direcciónIP.jpeg" />
 
-![.](images/introducción_y_desarrollo_de_VPN_con_WireGuard/4-W10-ping.jpeg)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/introducción_y_desarrollo_de_VPN_con_WireGuard/4-W10-ping.jpeg" />
 
 Además de esto, he preparado una pequeña demo en la que podremos ver en tiempo real tanto el servidor como el cliente, cuando estamos navegando y realizando transmisiones de datos.
 
@@ -501,7 +496,7 @@ Reiniciado el servidor y activadas las conexiones en ambos clientes, ya podríam
 [Demo iOS - WireGuard](https://www.youtube.com/watch?v=Z4zdkleJfKg)
 
 
-##Conclusión
+## Conclusión
 
 Espero que a través de este proyecto hayáis podido aprender y comprender todas las facilidades y ventajas que nos aporta este software, al igual que he aprendido yo.
 

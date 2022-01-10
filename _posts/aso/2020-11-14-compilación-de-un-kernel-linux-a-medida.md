@@ -996,4 +996,4 @@ javier@debian:~/kernelLinux$ du -hs * | grep 'linux-image'
 
 Podemos observar que he conseguido reducir el número de componentes en una gran cantidad. Los módulos se han reducido de 170 hasta 16, es decir, más de 10 veces menos y he eliminado más de 800 enlaces que se incluirán en *vmlinuz*. A consecuencia de esto, el peso del paquete *.deb* resultante es de 3.0 MB.
 
-Puedes descargar el paquete *.deb* [aquí](images/aso_compilacion_de_un_kernel_linux_a_medida/linux-image-4.19.152_4.19.152-103_amd64.deb).
+Puedes descargar el paquete *.deb* [aquí](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/aso_compilacion_de_un_kernel_linux_a_medida/linux-image-4.19.152_4.19.152-103_amd64.deb).

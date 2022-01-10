@@ -117,11 +117,11 @@ Nos dirigimos al navegador e introducimos la dirección de *localhost* y el puer
 
 Nos debe aparecer una interfaz como esta:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_admin.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_admin.png" />
 
 Si introducimos las credenciales que hemos especificado a la hora de la creación del usuario administrador, accederemos a esta web:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_admin_dentro.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_admin_dentro.png" />
 
 - **Crea dos preguntas, con posibles respuestas.**
 
@@ -129,29 +129,29 @@ Para crear una pregunta nueva, debemos dirigirnos a la sección **POLLS** y en e
 
 Nos aparecerá un menú como este que rellenaremos con los datos que deseemos:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_pregunta1.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_pregunta1.png" />
 
 Voy a crear la segunda pregunta:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_pregunta2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_pregunta2.png" />
 
 Y con esto ya habríamos creado las dos preguntas con las respuestas. Aquí lo podemos ver:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_preguntas_creadas.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_preguntas_creadas.png" />
 
 - **Comprueba en el navegador que la aplicación está funcionando, accede a la URL `\polls`.**
 
 Después de haber generado las dos nuevas preguntas, si nos dirigimos a la dirección `http://127.0.0.1:8000/polls`, podemos ver que nos aparecen ambas:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_polls.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_polls.png" />
 
 Si hacemos *click* en cualquiera de ellas:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_polls_pregunta1.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_polls_pregunta1.png" />
 
 Elegimos una respuesta:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_polls_pregunta1_respondida.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_polls_pregunta1_respondida.png" />
 
 Y podemos observar como nos ha contabilizado el valor de la nueva respuesta.
 
@@ -425,7 +425,7 @@ systemctl restart apache2.service
 
 Si probamos a acceder a la dirección de la web, en mi caso `172.22.200.253/admin`:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_admin_produccion.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_admin_produccion.png" />
 
 Vemos como nos muestra la aplicación pero sin su hoja de estilo.
 
@@ -437,7 +437,7 @@ En primer lugar, para 'arreglar' la página `admin`, debemos dirigirnos a la rut
 
 Hecho esto, si accedemos de nuevo a la página `/admin`:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_admin_produccion_conestilo.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_admin_produccion_conestilo.png" />
 
 Ahora sí apreciamos la hoja de estilo.
 
@@ -455,7 +455,7 @@ Alias /static/ /srv/www/django_tutorial/polls/static/
 
 Si accedemos ahora la página `/polls`:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_polls_produccion.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_polls_produccion.png" />
 
 Vemos como también poseemos hoja de estilo.
 
@@ -471,7 +471,7 @@ DEBUG = False
 
 Accedemos a la página `/admin`:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_admin_produccion_conestilo.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_admin_produccion_conestilo.png" />
 
 
 ## Tarea 3: Modificación de nuestra aplicación
@@ -498,7 +498,7 @@ He introducido esta línea en él:
 
 Si accedemos ahora la página `/polls` en el entorno de desarrollo:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_polls_desarrollo_nombre.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_polls_desarrollo_nombre.png" />
 
 Vemos que el cambio lo hemos realizado correctamente, por tanto, podríamos llevárnoslo al entorno de producción. Para hacer esto:
 
@@ -520,7 +520,7 @@ Tan solo nos quedaría descargar los cambios en el entorno de producción:
 
 Si accedemos ahora la página `/polls` en el entorno de producción:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_polls_produccion_nombre.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_polls_produccion_nombre.png" />
 
 Ya habríamos subido el cambio.
 
@@ -536,7 +536,7 @@ La imagen que se está sirviendo actualmente, se encuentra en la ruta `/polls/st
 
 Una vez hemos insertado en esa ruta la nueva imagen, vamos a visualizar la página `/polls`:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_polls_desarrollo_imagen.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_polls_desarrollo_imagen.png" />
 
 Vemos que el cambio lo hemos realizado correctamente, por tanto, podríamos llevárnoslo al entorno de producción. Para hacer esto:
 
@@ -559,7 +559,7 @@ Tan solo nos quedaría descargar los cambios en el entorno de producción:
 
 Si accedemos ahora la página `/polls` en el entorno de producción:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_polls_produccion_imagen.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_polls_produccion_imagen.png" />
 
 Ya habríamos subido el cambio.
 
@@ -647,6 +647,6 @@ Y por último, nos bajamos los cambios al entorno de producción:
 
 Si accedemos a la página `/admin` del entorno de producción:
 
-![.](images/iaw_despliegue_de_aplicaciones_python/django_polls_produccion_categorias.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_despliegue_de_aplicaciones_python/django_polls_produccion_categorias.png" />
 
 Vemos como efectivamente hemos añadido en la sección *POLLS*, el apartado **Categorias**.

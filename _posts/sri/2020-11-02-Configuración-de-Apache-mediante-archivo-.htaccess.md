@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-Configuración de apache mediante archivo .htaccess
-Date: 2020/11/2
-Category: Servicios de Red e Internet
-Header_Cover: theme/images/banner-servicios.jpg
-Tags: Apache, web, htaccess
 
 ## Configuración de apache mediante archivo .htaccess
 
@@ -29,7 +24,7 @@ Vamos a crear la carpeta `nas` dentro de `public_html` y vamos a crear un archiv
 
 Si probamos a acceder a la dirección [https://javierperezhidalgoapache.000webhostapp.com/nas/](https://javierperezhidalgoapache.000webhostapp.com/nas/) podemos ver como efectivamente nos muestra el listado de ficheros:
 
-![.](images/sri_configuracion_de_apache_mediante_archivo_htaccess/naspordefecto.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_configuracion_de_apache_mediante_archivo_htaccess/naspordefecto.png" />
 
 Pero esto nos lo muestra porque por defecto viene habilitada la opción `Indexes` para todos los directorios hijos de `public_html`, por tanto no tendría ningún misterio hacerlo así. Por eso he decidido quitar esta opción y volver a configurarla de manera manual. Para ello, en el `.htaccess` que se encuentra en `public_html` he introducido la siguiente línea:
 
@@ -39,7 +34,7 @@ Options -Indexes
 
 Si accedemos ahora a [https://javierperezhidalgoapache.000webhostapp.com/nas/](https://javierperezhidalgoapache.000webhostapp.com/nas/):
 
-![.](images/sri_configuracion_de_apache_mediante_archivo_htaccess/nasdeshabilitada.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_configuracion_de_apache_mediante_archivo_htaccess/nasdeshabilitada.png" />
 
 Vemos como ya no nos muestra el listado de ficheros, entonces ahora voy a configurar esta opción en el `.htaccess` que he creado en la carpeta `/nas` y voy a introducir la siguiente línea:
 
@@ -49,7 +44,7 @@ Options +Indexes
 
 Accedemos de nuevo a [https://javierperezhidalgoapache.000webhostapp.com/nas/](https://javierperezhidalgoapache.000webhostapp.com/nas/):
 
-![.](images/sri_configuracion_de_apache_mediante_archivo_htaccess/nashabilitada.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_configuracion_de_apache_mediante_archivo_htaccess/nashabilitada.png" />
 
 Ahora sí hemos realizado la configuración de manera correcta.
 
@@ -83,7 +78,7 @@ javier:prohibido:fa09dc88b5d3c47ca6c0b51b3fb54d4c
 
 Y ahora vamos a copiar la línea que hemos generado y la incluiremos dentro de nuestro fichero de contraseñas, que se llamará `htdigest`.
 
-![.](images/sri_configuracion_de_apache_mediante_archivo_htaccess/htdigest.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_configuracion_de_apache_mediante_archivo_htaccess/htdigest.png" />
 
 Creamos el directorio `prohibido` dentro de `public_html`, y dentro de este directorio un nuevo `.htaccess`, con estas líneas:
 
@@ -100,16 +95,16 @@ Pues porque realmente, el directorio `/` donde hemos creado el fichero `htdigest
 
 Esta información la podemos encontrar aquí:
 
-![.](images/sri_configuracion_de_apache_mediante_archivo_htaccess/verinformacion.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_configuracion_de_apache_mediante_archivo_htaccess/verinformacion.png" />
 
 Vemos como efectivamente el directorio es `/storage/ssd2/013/15299013`:
 
-![.](images/sri_configuracion_de_apache_mediante_archivo_htaccess/informaciondirectorio.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_configuracion_de_apache_mediante_archivo_htaccess/informaciondirectorio.png" />
 
 Si probamos a acceder a la dirección [https://javierperezhidalgoapache.000webhostapp.com/prohibido](https://javierperezhidalgoapache.000webhostapp.com/prohibido) nos pide las credenciales necesarias para mostrar la página.
 
-![.](images/sri_configuracion_de_apache_mediante_archivo_htaccess/autenticacion.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_configuracion_de_apache_mediante_archivo_htaccess/autenticacion.png" />
 
 Si introducimos correctamente el usuario y contraseña, nos muestra la página que he creado con un simple `index.html`:
 
-![.](images/sri_configuracion_de_apache_mediante_archivo_htaccess/pagina.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_configuracion_de_apache_mediante_archivo_htaccess/pagina.png" />

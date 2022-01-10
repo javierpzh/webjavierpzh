@@ -6,7 +6,7 @@ layout: post
 
 **Vamos a modificar el escenario que tenemos actualmente en OpenStack para que se adecúe a la realización de todas las prácticas en todos los módulos de 2º, en particular para que tenga una estructura más real a la de varios equipos detrás de un cortafuegos, separando los servidores en dos redes: red interna y DMZ. Para ello vamos a reutilizar todo lo hecho hasta ahora y añadiremos una máquina más: Frestón**
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/escenario2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/escenario2.png" />
 
 #### 1. Creación de la red DMZ:
 
@@ -19,19 +19,19 @@ Para crearla, nos dirigimos a nuestro panel de administración de *OpenStack* y 
 
 En el primer apartado de este asistente, indicamos el nombre que poseerá nuestra nueva red:
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearDMZ1.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearDMZ1.png" />
 
 En segundo lugar, indicamos las direcciones de red que abarcará, y deshabilitaremos la puerta de enlace ya que no nos va hacer falta debido a que vamos a poner a *Dulcinea* como *gateway*:
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearDMZ2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearDMZ2.png" />
 
 Por último, vamos a dejar marcada la opción de **Habilitar DHCP** que viene de manera predeterminada, para que de esta forma, nos dé una dirección IP de manera automática cuando conectemos una instancia.
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearDMZ3.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearDMZ3.png" />
 
 Hecho esto, ya tendríamos nuestra red DMZ creada, como podemos observar:
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearDMZ4.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearDMZ4.png" />
 
 Hemos finalizado este primer ejercicio.
 
@@ -46,11 +46,11 @@ Hemos finalizado este primer ejercicio.
 
 Antes de crear la propia instancia en sí, vamos a crear el volumen sobre el que posteriormente generaremos la instancia **Freston**. Para ello he creado un volumen con estas preferencias:
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearvolumenfreston.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearvolumenfreston.png" />
 
 Una vez ha terminado el proceso de creación del nuevo volumen, obtenemos como resultado:
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearvolumenfrestonfin.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearvolumenfrestonfin.png" />
 
 Y ahora, un detalle importante que hay que tener en cuenta antes de realizar el lanzamiento de la nueva instancia es, que si recordamos, a la **red interna**, le deshabilitamos el **servidor DHCP**, por lo que si ahora generamos esta nueva instancia perteneciente a esta red, no adquirirá ninguna dirección mediante *DHCP*, por lo que será inaccesible, porque recordemos que a esta máquina también se accederá a través de *Dulcinea*. Por tanto, vamos a habilitar el servidor *DHCP* de la red interna.
 
@@ -60,23 +60,23 @@ Para crearla, nos dirigimos hacia nuestro panel de administración de *OpenStack
 
 En el primer apartado de este asistente, indicamos el nombre que poseerá nuestra nueva instancia:
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearfreston1.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearfreston1.png" />
 
 Ahora establecemos que el origen de arranque sea el volumen creado previamente:
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearfreston2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearfreston2.png" />
 
 Como **Sabor** indicamos que tenga un **m1.mini**.
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearfreston3.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearfreston3.png" />
 
 Y por último, le asignamos la red a la que va a pertenecer esta máquina.
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearfreston4.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearfreston4.png" />
 
 Aquí podemos ver como hemos creado esta instancia correctamente y que pertenece a la red interna, ya que posee una dirección **10.0.1.6**
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearfrestonfin.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/crearfrestonfin.png" />
 
 Vamos a probar a acceder a **Freston** a través de *Dulcinea*:
 
@@ -329,21 +329,21 @@ Es hora de realizar el último cambio del ejercicio, y no es más que cambiar la
 
 Para llevar a cabo esta modificación, nos dirigimos a nuestro panel de administración de *OpenStack* y nos situamos en la sección de **Instancias**. Una vez aquí, *clickamos* en la pequeña flecha del final, y se nos desplegará este menú de opciones, donde debemos seleccionar **Desconectar interfaz**:
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/menu.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/menu.png" />
 
 Seleccionamos la interfaz a desconectar, en este caso la interfaz conectada a la red interna:
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/desconectarredinterna.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/desconectarredinterna.png" />
 
 Y una vez hecho esto, en el mismo menú de opciones, debemos seleccionar **Conectar interfaz**,  y seleccionar la **red DMZ**. Vemos como ahora *Quijote*, posee una dirección IP **10.0.2.6**.
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/quijoteredDMZ.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/quijoteredDMZ.png" />
 
 Recordemos, que a las instancias *Sancho*, *Quijote* y *Freston*, accedemos mediante *Dulcinea*, por lo que, si queremos acceder a *Quijote*, debe tener conexión con *Dulcinea*, y esto solo es posible si añadimos una nueva interfaz a *Dulcinea* para que también pertenezca a la **red DMZ**, por lo que también la vamos a añadir.
 
 Aquí podemos ver el resultado:
 
-![.](images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/dulcinearedDMZ.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_modificacion_del_escenario_de_trabajo_en_OpenStack/dulcinearedDMZ.png" />
 
 Vamos a comprobar que realmente podemos acceder a *Quijote* a través de *Dulcinea*:
 

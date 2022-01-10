@@ -26,17 +26,17 @@ Al iniciar el sistema, nos aparece una ventana en la que nos indica la direcció
 
 Hecho esto, tenemos que introducir la dirección IP desde un navegador, para descargar las herramientas necesarias para llevar a cabo la gestión remota.
 
-![.](images/hlc_instalacion_y_configuracion_basica_de_VMWare_ESXi/vmwareweb.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_instalacion_y_configuracion_basica_de_VMWare_ESXi/vmwareweb.png" />
 
 Descargué e instalé la aplicación llamada `vSphere Client`.
 
-![.](images/hlc_instalacion_y_configuracion_basica_de_VMWare_ESXi/vSphereClient.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_instalacion_y_configuracion_basica_de_VMWare_ESXi/vSphereClient.png" />
 
 En ella, introducimos nuestras credenciales y se nos abrirá un administrador.
 
 Con estos pasos, ya habríamos instalado correctamente **VMWare ESXi 5.5** en nuestro servidor y tendríamos acceso remoto a él mediante una herramienta gráfica.
 
-![.](images/hlc_instalacion_y_configuracion_basica_de_VMWare_ESXi/vmwareadmin.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_instalacion_y_configuracion_basica_de_VMWare_ESXi/vmwareadmin.png" />
 
 Para terminar, voy a crear una máquina virtual de prueba, que correrá un sistema **Debian 10**.
 
@@ -46,6 +46,6 @@ Cuando tenemos la *ISO* en nuestro servidor, crearemos la propia máquina virtua
 
 Una vez lleguemos al apartado **CD/DVD drive 1**, debemos seleccionar la opción **Datastore ISO File** y seleccionar el archivo `.iso` que acabamos de almacenar. También, es muy importante tener seleccionada la opción **Connect at power on**, ya que sino, no nos detectará la *ISO* en el arranque.
 
-![.](images/hlc_instalacion_y_configuracion_basica_de_VMWare_ESXi/vmwareseleccionariso.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_instalacion_y_configuracion_basica_de_VMWare_ESXi/vmwareseleccionariso.png" />
 
 Con esto, ya podríamos encender nuestra *mv* y realizar el proceso de instalación del sistema, por lo que hemos llegado al final del *post*.

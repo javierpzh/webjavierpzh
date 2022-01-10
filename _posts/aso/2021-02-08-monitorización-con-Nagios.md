@@ -32,7 +32,7 @@ Las alertas que genera pueden ser recibidas por correo electrónico y mensajes S
 
 Así luce el panel web de *Nagios*:
 
-![.](images/aso_monitorización_con_Nagios/nagios.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/aso_monitorización_con_Nagios/nagios.png" />
 
 
 ## Instalación del servidor
@@ -53,11 +53,11 @@ He decidido escoger como servidor este equipo principalmente porque *Nagios* nec
 
 Hecha la introducción, es el momento de empezar con la propia instalación en sí.
 
-Para descargar *Nagios Core* tenemos dos opciones, o bien descargar los paquetes desde los repositorios oficiales, o, como prefiero hacer en mi caso, ya que con los paquetes oficiales he tenido problemas, nos dirigimos a su [sitio web](https://github.com/NagiosEnterprises/nagioscore/releases) y descargamos directamente el archivo `.tar.gz`. A día de hoy, la versión más reciente disponible es la 2.3.3, la dejo [aquí](images/aso_monitorización_con_Nagios/nagios-4.4.6.zip).
+Para descargar *Nagios Core* tenemos dos opciones, o bien descargar los paquetes desde los repositorios oficiales, o, como prefiero hacer en mi caso, ya que con los paquetes oficiales he tenido problemas, nos dirigimos a su [sitio web](https://github.com/NagiosEnterprises/nagioscore/releases) y descargamos directamente el archivo `.tar.gz`. A día de hoy, la versión más reciente disponible es la 2.3.3, la dejo [aquí](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/aso_monitorización_con_Nagios/nagios-4.4.6.zip).
 
 Pero antes de ello, debemos descargar los *plugins* de *Nagios*. Esto es algo que se debe hacer tanto en la máquina servidor como en cada cliente que queramos supervisar.
 
-Para descargar estos *plugins*, nos dirigimos a su [sitio web](https://nagios-plugins.org/) y descargamos directamente el archivo `.tar.gz`. A día de hoy, la versión más reciente disponible es la 2.3.3, la dejo [aquí](images/aso_monitorización_con_Nagios/nagios-plugins-2.3.3.zip).
+Para descargar estos *plugins*, nos dirigimos a su [sitio web](https://nagios-plugins.org/) y descargamos directamente el archivo `.tar.gz`. A día de hoy, la versión más reciente disponible es la 2.3.3, la dejo [aquí](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/aso_monitorización_con_Nagios/nagios-plugins-2.3.3.zip).
 
 Una vez descargado y descomprimido el archivo, antes de llevar a cabo la instalación, debemos instalar algunos paquetes y dependencias que nos harán falta durante todo el proceso de instalación.
 
@@ -117,19 +117,19 @@ systemctl start nagios && systemctl enable nagios
 
 Listo. Ahora podremos acceder al panel web de *Nagios*, por tanto, si nos dirigimos a nuestra dirección web */nagios*, según esté configurado en nuestro servidor web, en mi caso `www.javierpzh.gonzalonazareno.org/nagios` nos aparecerá esta ventana:
 
-![.](images/aso_monitorización_con_Nagios/nagiosautentificacion.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/aso_monitorización_con_Nagios/nagiosautentificacion.png" />
 
 Si introducimos el usuario y la contraseña que hemos creado anteriormente:
 
-![.](images/aso_monitorización_con_Nagios/nagiospanel.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/aso_monitorización_con_Nagios/nagiospanel.png" />
 
 Vemos como podemos acceder al panel de administración de *Nagios*. Si accedemos al apartado **Hosts**:
 
-![.](images/aso_monitorización_con_Nagios/nagioshosts.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/aso_monitorización_con_Nagios/nagioshosts.png" />
 
 Vemos que actualmente nos muestra nuestro equipo local. Si accedemos al apartado **Services**:
 
-![.](images/aso_monitorización_con_Nagios/nagiosservicios.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/aso_monitorización_con_Nagios/nagiosservicios.png" />
 
 Vemos que actualmente nos muestra los servicios de nuestro equipo local, por lo que habríamos finalizado la instalación de *Nagios Core* en nuestro sistema.
 
@@ -467,6 +467,6 @@ systemctl restart nagios
 
 Si nos dirigimos a nuestro panel web, en la sección **Hosts**, ahora además de *Quijote*, nos aparecen los nuevos clientes:
 
-![.](images/aso_monitorización_con_Nagios/nagioshostsfinal.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/aso_monitorización_con_Nagios/nagioshostsfinal.png" />
 
 Perfecto, ya habríamos añadido y estaríamos monitorizando todos los clientes deseados, por lo que es hora de finalizar el artículo.

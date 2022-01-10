@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-Servidor de correos
-Date: 2021/02/21
-Category: Servicios de Red e Internet
-Header_Cover: theme/images/banner-servicios.jpg
-Tags: Correos, postfix, dovecot, imap, imaps, SMTPS
 
 En este *post* vamos a instalar y configurar de manera adecuada un servidor de correos en una **VPS** alojada en **OVH**. Mi dominio es `iesgn15.es`. El nombre del servidor de correo será `mail.iesgn15.es` (este es el nombre que deberá aparecer en el registro MX).
 
@@ -26,7 +21,7 @@ Comencemos.
 
 Antes de realizar este ejercicio, vamos a crear un registro de tipo **SPF** en nuestro DNS de OVH, esto le servirá a **Gmail** para identificar que nuestro correo no es **Spam**. He creado el siguiente registro:
 
-![.](images/sri_servidor_de_correos/registrospf.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/registrospf.png" />
 
 Ahora vamos a probar a enviar un correo electrónico desde nuestro servidor local, para ello haremos uso de la herramienta `mail`:
 
@@ -51,9 +46,9 @@ Jan 21 10:24:30 vpsjavierpzh postfix/qmgr[9341]: A492F101017: removed
 
 Podemos observar que nos muestra una serie de mensajes de los que podemos sacar que hemos enviado un correo desde `debian@iesgn15.es` hacia `javierperezhidalgo01@gmail.com` y que el estado es *sent*, por lo que en teoría el correo debería haber llegado correctamente. Si nos dirigimos a la bandeja de entrada del correo `javierperezhidalgo01@gmail.com`:
 
-![.](images/sri_servidor_de_correos/correorecibidogmail.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/correorecibidogmail.png" />
 
-![.](images/sri_servidor_de_correos/correorecibidogmailinfo.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/correorecibidogmailinfo.png" />
 
 Vemos que efectivamente hemos recibido el correo procedente de `debian@iesgn15.es`.
 
@@ -71,11 +66,11 @@ En estas líneas se aprecia como ha pasado correctamente y ha hecho uso del regi
 
 Al igual que en la tarea anterior, antes de realizar este ejercicio, vamos a crear un registro de tipo **MX** en nuestro DNS de OVH. He creado el siguiente registro que apunta a su vez a un registro tipo *A*:
 
-![.](images/sri_servidor_de_correos/registromx.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/registromx.png" />
 
 Hecho esto, vamos a enviar un correo desde **Gmail** hacia `debian@iesgn15.es`:
 
-![.](images/sri_servidor_de_correos/correoenviadogmail.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/correoenviadogmail.png" />
 
 Una vez enviado, vamos a comprobar que lo hayamos recibido en nuestro servidor local, para ello vamos a visualizar de nuevo los *logs* del fichero `/var/log/mail.log`:
 
@@ -189,7 +184,7 @@ newaliases
 
 Hecho esto, vamos a enviar un correo desde **Gmail** hacia `root@iesgn15.es`:
 
-![.](images/sri_servidor_de_correos/correoenviadogmailparareenvioadebian.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/correoenviadogmailparareenvioadebian.png" />
 
 Una vez enviado, vamos a comprobar que lo hayamos recibido en nuestro servidor local, en el usuario **debian**. Para leer los nuevos correos, haremos uso de la herramienta `mail` en el usuario *debian*.
 
@@ -234,21 +229,21 @@ reyole111@gmail.com
 
 Hecho esto, vamos a enviar un correo desde **Gmail** hacia `root@iesgn15.es`:
 
-![.](images/sri_servidor_de_correos/correoenviadogmailparareenvioadebianygmail.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/correoenviadogmailparareenvioadebianygmail.png" />
 
 Supuestamente, lo que ahora debería ocurrir es lo siguiente. El correo cuyo destinatario es **root**, debe llegar a **debian**, lo cuál es señal de que el alias está actuando correctamente, y automáticamente después, el correo debe ser reenviado a la dirección **reyole111@gmail.com**.
 
 Vamos a ver si hemos recibido el correo en la bandeja de entrada de **reyole111@gmail.com**.
 
-![.](images/sri_servidor_de_correos/correorecibidogmailreyole.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/correorecibidogmailreyole.png" />
 
-![.](images/sri_servidor_de_correos/correorecibidogmailreyoleinfo.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/correorecibidogmailreyoleinfo.png" />
 
 Efectivamente, también hemos recibido el correo en la dirección *reyole111@gmail.com*, por tanto la redirección está bien configurada.
 
 ¿Recordáis que teníamos programada una tarea en el *cron* para las 18:40? Bien, pues resulta que acabo de recibir en `reyole111@gmail.com` el siguiente correo:
 
-![.](images/sri_servidor_de_correos/correocron.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/correocron.png" />
 
 Se puede apreciar la salida de los comandos que indiqué en la tarea del *cron*, por lo que, además de ver como nuestro *cron* nos ha notificado por correo, podemos ver que una vez más han actuado tanto el alias como la redirección configurada.
 
@@ -287,7 +282,7 @@ Vamos a hacer la prueba visualizando los *logs* y enviando un nuevo correo desde
 <pre>
 root@vpsjavierpzh:~# tail -f /var/log/mail.log
 Feb 19 19:14:21 vpsjavierpzh postfix/smtpd[19227]: connect from mail-io1-f42.google.com[209.85.166.42]
-Feb 19 19:14:22 vpsjavierpzh policyd-spf[19234]: prepend Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=209.85.166.42; helo=mail-io1-f42.google.com; envelope-from=javierperezhidalgo01@gmail.com; receiver=<UNKNOWN>
+Feb 19 19:14:22 vpsjavierpzh policyd-spf[19234]: prepend Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=209.85.166.42; helo=mail-io1-f42.google.com; envelope-from=javierperezhidalgo01@gmail.com; receiver=\<UNKNOWN\>
 Feb 19 19:14:22 vpsjavierpzh postfix/smtpd[19227]: 7ED0310115E: client=mail-io1-f42.google.com[209.85.166.42]
 Feb 19 19:14:22 vpsjavierpzh postfix/cleanup[19237]: 7ED0310115E: message-id=<CAMu5ax89DXzEtwWTeLm-OmDK18zXgXDocqiuk0XLn+9OnAu3cA@mail.gmail.com>
 Feb 19 19:14:22 vpsjavierpzh postfix/qmgr[19197]: 7ED0310115E: from=<javierperezhidalgo01@gmail.com>, size=2710, nrcpt=1 (queue active)
@@ -348,7 +343,7 @@ systemctl restart postfix
 systemctl restart spamassassin
 </pre>
 
-Llegó el momento de realizar la prueba, enviaremos un correo desde *Gmail*, y en el mensaje del correo, introduciré un mensaje de *spam*, que puedes encontrar [aquí](images/sri_servidor_de_correos/correospam.txt).
+Llegó el momento de realizar la prueba, enviaremos un correo desde *Gmail*, y en el mensaje del correo, introduciré un mensaje de *spam*, que puedes encontrar [aquí](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/correospam.txt).
 
 Vamos a hacer la prueba visualizando los *logs*:
 
@@ -476,11 +471,11 @@ set spoolfile="~/Maildir"
 
 Hecho esto, voy a enviar un correo desde *Gmail* y posteriormente utilizaré el comando `mutt` para abrir el nuevo cliente.
 
-![.](images/sri_servidor_de_correos/mutt1.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/mutt1.png" />
 
 Abrimos el nuevo correo:
 
-![.](images/sri_servidor_de_correos/mutt2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/mutt2.png" />
 
 Podemos ver como ya estamos utilizando un nuevo cliente de correos.
 
@@ -625,11 +620,11 @@ apt install thunderbird -y
 
 Inicio sesión:
 
-![.](images/sri_servidor_de_correos/thunderbird.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/thunderbird.png" />
 
 Abrimos el nuevo correo:
 
-![.](images/sri_servidor_de_correos/correothunderbird.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/correothunderbird.png" />
 
 Podemos apreciar como el correo ha sido recibido correctamente en nuestro cliente *Thunderbird*.
 
@@ -650,6 +645,6 @@ echo "Esto es una prueba" | mutt  -s 'Test' test-6noihtep7@srv1.mail-tester.com
 
 Veamos el resultado:
 
-![.](images/sri_servidor_de_correos/puntos.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_de_correos/puntos.png" />
 
 ¡Genial, me ha dado un **9/10**!

@@ -167,19 +167,19 @@ Quit the server with CONTROL-C.
 
 Si accedemos a la dirección `127.0.0.1:8000`:
 
-![.](images/iaw_instalación_de_aplicación_web_Python/localhost.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalación_de_aplicación_web_Python/localhost.png" />
 
 Nuestra aplicación ya se está ejecutando. Ahora vamos a crear nuestro blog y vamos a personalizar un poco la web, para ello, nos *logueamos*:
 
-![.](images/iaw_instalación_de_aplicación_web_Python/localhostlogin.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalación_de_aplicación_web_Python/localhostlogin.png" />
 
 Y así accederemos al panel de administración:
 
-![.](images/iaw_instalación_de_aplicación_web_Python/localhostadmin.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalación_de_aplicación_web_Python/localhostadmin.png" />
 
 Una vez aquí, lo configuramos a nuestro gusto y una vez finalizado, podemos ver el resultado:
 
-![.](images/iaw_instalación_de_aplicación_web_Python/localhostblog.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalación_de_aplicación_web_Python/localhostblog.png" />
 
 Es la hora de pasar esta aplicación al entorno de producción, para ello tendremos que realizar la copia de seguridad adecuada para restaurarla en este entorno. Como he comentado anteriormente, vamos a utilizar gestores de bases de datos distintos, por lo que, tendremos que buscar una solución para solventar esto.
 
@@ -523,7 +523,7 @@ systemctl restart bind9
 
 Y ahora sí, llegó la hora de la verdad, vamos a probar a acceder a la dirección `python.javierpzh.gonzalonazareno.org` en nuestro navegador:
 
-![.](images/iaw_instalación_de_aplicación_web_Python/produccionsinhojadeestilo.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalación_de_aplicación_web_Python/produccionsinhojadeestilo.png" />
 
 Parece que nos sirve la aplicación pero podemos apreciar que no hace uso de las hojas de estilos. Eso es porque estamos utilizando el servidor *uWSGI* que solo ejecuta el código *Python*. De manera que tendríamos que realizar un **proxy inverso**, además, como aún no hemos importado las hojas de estilos de nuestra aplicación, vamos a ello:
 
@@ -545,10 +545,10 @@ systemctl restart httpd
 
 Volvemos a acceder a `python.javierpzh.gonzalonazareno.org`:
 
-![.](images/iaw_instalación_de_aplicación_web_Python/produccionhojadeestilo.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalación_de_aplicación_web_Python/produccionhojadeestilo.png" />
 
 Ahora sí parece estar funcionando totalmente. Vamos a dirigirnos al blog creado en el entorno de desarrollo para comprobar que todo está correcto:
 
-![.](images/iaw_instalación_de_aplicación_web_Python/produccionhojadeestiloblog.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalación_de_aplicación_web_Python/produccionhojadeestiloblog.png" />
 
 Efectivamente, el resultado es el esperado y por tanto damos por finalizado este *post*.

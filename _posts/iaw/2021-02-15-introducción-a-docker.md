@@ -36,7 +36,7 @@ Vemos como al eliminar el contenedor, la información que habíamos guardado en 
 
 #### Los datos en los contenedores
 
-![.](images/iaw_introducción_a_docker/docker.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_introducción_a_docker/docker.png" />
 
 Ante la situación anteriormente descrita, *Docker* nos proporciona varias soluciones para persistir los datos de los contenedores. En este *post* nos vamos a centrar en las dos que considero que son más importantes:
 
@@ -142,7 +142,7 @@ Listo.
 
 Nos dirigimos a la dirección `http://localhost:8080/info.php`:
 
-![.](images/iaw_introducción_a_docker/info.php.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_introducción_a_docker/info.php.png" />
 
 Efectivamente podemos visualizar el fichero `info.php`.
 
@@ -172,7 +172,7 @@ Listo.
 
 Podemos ver que sí, ya que estamos utilizando el mismo volumen.
 
-![.](images/iaw_introducción_a_docker/info.php2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_introducción_a_docker/info.php2.png" />
 
 
 
@@ -205,7 +205,7 @@ Listo.
 
 Nos dirigimos a la dirección `http://localhost:8080`:
 
-![.](images/iaw_introducción_a_docker/bindmount1.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_introducción_a_docker/bindmount1.png" />
 
 Podemos visualizar la información.
 
@@ -219,7 +219,7 @@ javier@debian:~$ nano pruebadocker/index.html
 
 Nos dirigimos a la dirección `http://localhost:8080`:
 
-![.](images/iaw_introducción_a_docker/bindmount2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_introducción_a_docker/bindmount2.png" />
 
 Efectivamente ha cambiado el contenido.
 
@@ -249,7 +249,7 @@ Listo.
 
 Al igual que en el ejercicio anterior, podemos ver que sí, ya que estamos utilizando el mismo volumen.
 
-![.](images/iaw_introducción_a_docker/bindmount2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_introducción_a_docker/bindmount2.png" />
 
 
 #### Trabajando con contenedores con almacenamiento persistente
@@ -267,11 +267,11 @@ javier@debian:~$ docker run -d --name Nextcloud -v /home/javier/nextcloud:/var/w
 
 Nos dirigimos a la dirección `http://localhost:8080`:
 
-![.](images/iaw_introducción_a_docker/nextcloud.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_introducción_a_docker/nextcloud.png" />
 
 Lo instalamos con una base de datos **sqlite** y una vez lo tengamos instalado, subimos cualquier fichero. En mi caso he subido el fichero llamado **logojp.jpg**.
 
-![.](images/iaw_introducción_a_docker/nextcloud2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_introducción_a_docker/nextcloud2.png" />
 
 Listo.
 
@@ -297,11 +297,11 @@ b102fd06e36cba2e26db09414359892e3ad403a64715f7e4311cad460b2d7684
 
 Nos dirigimos a la dirección `http://localhost:8080`:
 
-![.](images/iaw_introducción_a_docker/nextcloud3.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_introducción_a_docker/nextcloud3.png" />
 
 Podemos ver como esta vez no nos pide instalar la aplicación, sino que directamente nos pide que iniciemos sesión. Iniciamos sesión con el usuario creado anteriormente y visualizamos los archivos:
 
-![.](images/iaw_introducción_a_docker/nextcloud4.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_introducción_a_docker/nextcloud4.png" />
 
 Efectivamente se encuentra el logo que hemos subido en el anterior contenedor, por lo que no hemos perdido la información al eliminar el contenedor.
 
@@ -375,7 +375,7 @@ Este tipo de red nos va a permitir:
 - Aislar los contenedores del acceso exterior.
 - Publicar servicios que tengamos en los contenedores mediante redirecciones que *Docker* implementará con las pertinentes reglas de *iptables*.
 
-![.](images/iaw_introducción_a_docker/redesdocker.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_introducción_a_docker/redesdocker.png" />
 
 Si conectamos un contenedor a la red *host*, el contenedor estaría en la misma red que el *host* (por lo tanto toma direccionamiento del servidor *DHCP* de nuestra red). Además los puerto son accesibles directamente desde el *host*. Por ejemplo:
 
@@ -419,7 +419,7 @@ Para gestionar las redes creadas por el usuario:
 
 **NOTA:** Cada red *Docker* que creemos, creará un puente de red específico. Podemos ver con `ip a`:
 
-![.](images/iaw_introducción_a_docker/redesdocker2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_introducción_a_docker/redesdocker2.png" />
 
 #### Asociación de redes a los contenedores
 

@@ -146,7 +146,7 @@ Y por último introducimos la siguiente línea en forma de *script PHP*, que lo 
 
 Hemos terminado de montar nuestro servidor LAMP.
 
-##Tarea 2: Instalación de drupal en mi servidor local
+## Tarea 2: Instalación de drupal en mi servidor local
 
 - **Configura el servidor web con virtual hosting para que el CMS sea accesible desde la dirección: `www.nombrealumno-drupal.org`.**
 
@@ -195,7 +195,7 @@ Si nos dirigimos a nuestra máquina anfitriona y añadimos al `/etc/hosts` esta 
 
 La página web tiene este aspecto:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/phpinfo.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/phpinfo.png" />
 
 
 - **Crea un usuario en la base de datos para trabajar con la base de datos donde se van a guardar los datos del CMS.**
@@ -352,25 +352,25 @@ systemctl restart apache2
 
 En este punto ya podemos hacer uso del **Instalador Web de Drupal**. Accedemos a la web que hemos configurado antes con la URL `www.javierperezhidalgo-drupal.org`, y se nos abrirá el instalador.
 
-![.](images/iaw_instalacion_local_de_un_cms_php/instaladorwebdrupal.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/instaladorwebdrupal.png" />
 
 - Seleccionamos el idioma deseado.
 - Seleccionamos el perfil de la instalación, en mi caso **estándar**.
 - Configuramos la base de datos:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/instaladordrupalbbdd.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/instaladordrupalbbdd.png" />
 
 Y ya comienza el proceso de instalación:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/instalandodrupal.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/instalandodrupal.png" />
 
 Terminada la instalación llega el momento de configurar la identidad del sitio y crear el usuario administrador.
 
-![.](images/iaw_instalacion_local_de_un_cms_php/configuraridentidadsitio.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/configuraridentidadsitio.png" />
 
 Completamos según nuestras preferencias y guardamos y listo:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/paginainiciodrupal.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/paginainiciodrupal.png" />
 
 
 - **Realiza una configuración mínima de la aplicación (Cambia la plantilla, crea algún contenido, …)**
@@ -379,21 +379,21 @@ Para **cambiar el tema de nuestro CMS**, nos dirigimos a la opción que nos apar
 
 Puede ser que no nos aparezca el botón `+ Instalar nuevo tema`. En este caso, debemos dirigirnos a la pestaña **Contenido** y en ésta, activar el módulo **Update Manager**. Hecho esto, ya nos aparecería este botón.
 
-![.](images/iaw_instalacion_local_de_un_cms_php/drupalupdatemanager.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/drupalupdatemanager.png" />
 
 Una vez tenemos instalado el tema que queremos, lo seleccionamos como activo:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/temaseleccionado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/temaseleccionado.png" />
 
 Y ya hemos cambiado el tema:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/nuevotemainicio.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/nuevotemainicio.png" />
 
 Vamos a añadir alguna entrada, para ver como se mostraría el contenido. Para ello en la parte superior de las opciones, donde dice **Contenido**, *clickamos* en `+ Añadir contenido`, y se nos abrirá una especie de editor, que configuramos a nuestro gusto y guardamos los cambios.
 
 Así quedaría nuestra nueva publicación:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/nuevocontenido.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/nuevocontenido.png" />
 
 - **Instala un módulo para añadir alguna funcionalidad a Drupal.**
 
@@ -401,15 +401,15 @@ Para **instalar un nuevo módulo** en Drupal, es bastante sencillo y parecido a 
 
 En mi caso, voy a instalar un módulo llamado ***AddToAny*** que permite compartir los artículos y entradas de la web a través de nuestras redes sociales.
 
-![.](images/iaw_instalacion_local_de_un_cms_php/moduloinstalado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/moduloinstalado.png" />
 
 Activamos el nuevo módulo:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/moduloactivado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/moduloactivado.png" />
 
 Observamos como en la página de inicio, ahora nos aparece un pequeño menú con varias redes sociales para compartir el artículo.
 
-![.](images/iaw_instalacion_local_de_un_cms_php/nuevomodulo.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/nuevomodulo.png" />
 
 
 ## Tarea 3: Configuración multinodo
@@ -708,7 +708,7 @@ apt remove --purge mariadb-server mariadb-client -y && apt autoremove -y
 
 Probamos a acceder a la página de *Drupal* ahora:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/bbddeliminada.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/bbddeliminada.png" />
 
 Obviamente, no podemos acceder a la web, ya que ahora mismo no se encuentra conectada a ninguna base de datos.
 
@@ -773,7 +773,7 @@ systemctl restart mysqld
 
 Accedemos a la dirección `www.javierperezhidalgo-drupal.org` para ver si ya vuelve a funcionar:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/bbddenremoto.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/bbddenremoto.png" />
 
 Ya podemos acceder de nuevo a nuestro sitio web *Drupal* que esta vez está utilizando una base de datos que se encuentra en otra máquina.
 
@@ -850,7 +850,7 @@ Created project in /srv/www/anchor-cms
   "./composer.json" does not match the expected JSON schema  
 
 
-create-project [-s|--stability STABILITY] [--prefer-source] [--prefer-dist] [--repository REPOSITORY] [--repository-url REPOSITORY-URL] [--add-repository] [--dev] [--no-dev] [--no-custom-installers] [--no-scripts] [--no-progress] [--no-secure-http] [--keep-vcs] [--remove-vcs] [--no-install] [--ignore-platform-req IGNORE-PLATFORM-REQ] [--ignore-platform-reqs] [--ask] [--] [<package>] [<directory>] [<version>]
+create-project [-s|--stability STABILITY] [--prefer-source] [--prefer-dist] [--repository REPOSITORY] [--repository-url REPOSITORY-URL] [--add-repository] [--dev] [--no-dev] [--no-custom-installers] [--no-scripts] [--no-progress] [--no-secure-http] [--keep-vcs] [--remove-vcs] [--no-install] [--ignore-platform-req IGNORE-PLATFORM-REQ] [--ignore-platform-reqs] [--ask] [--] [package] [directory] [version]
 </pre>
 
 Antes de pasar con el error del que nos ha informado, he cambiado el nombre del directorio:
@@ -879,7 +879,7 @@ Do not run Composer as root/super user! See https://getcomposer.org/root for det
 Continue as root/super user [yes]? yes
 Installing dependencies from lock file (including require-dev)
 Verifying lock file contents can be installed on current platform.
-Warning: The lock file is not up to date with the latest changes in composer.json. You may be getting outdated dependencies. It is recommended that you run `composer update` or `composer update <package name>`.
+Warning: The lock file is not up to date with the latest changes in composer.json. You may be getting outdated dependencies. It is recommended that you run `composer update` or `composer update \<package name\>`.
 Package operations: 13 installs, 0 updates, 0 removals
     Failed to download indigophp/hash-compat from dist: The zip extension and unzip command are both missing, skipping.
 Your command-line PHP is using multiple ini files. Run `php --ini` to show them.
@@ -997,33 +997,33 @@ Por último, añadimos esta línea al fichero `/etc/hosts` del equipo anfitrión
 
 Introducimos en el navegador la dirección `www.javierperezhidalgoanchor.org` y nos saldrá el instalador de *Anchor*:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/anchor.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/anchor.png" />
 
 Vamos a realizar una instalación rápida, ya que es muy parecido al proceso que hemos realizado para *Drupal*.
 
 En primer lugar indicamos el idioma y la zona horaria:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/idiomaanchor.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/idiomaanchor.png" />
 
 Especificamos la base de datos que va utilizar. La que previamente hemos creado en *MySQL*:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/bbddanchor.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/bbddanchor.png" />
 
 Configuramos el nombre de la página, la descripción, ...
 
-![.](images/iaw_instalacion_local_de_un_cms_php/confpaganchor.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/confpaganchor.png" />
 
 Creamos la cuenta administradora del sitio web:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/cuentaanchor.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/cuentaanchor.png" />
 
 Y con esto ya hemos terminado la instalación de *Anchor*.
 
-![.](images/iaw_instalacion_local_de_un_cms_php/instalacioncompletadaanchor.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/instalacioncompletadaanchor.png" />
 
 Así luce nuestra nueva página:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/terminadoanchor.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/terminadoanchor.png" />
 
 Hemos terminado la instalación de *Anchor*, pero me gustaría hacer una modificación. Y no es más, sino que volver a migrar nuestra base de datos a nuestra segunda máquina, es decir, a la **maquina2**, para así acceder a la base de datos remotamente.
 
@@ -1046,7 +1046,7 @@ apt remove --purge mariadb-server mariadb-client -y && apt autoremove -y
 
 Si probamos a acceder ahora a nuestra web *Anchor*:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/bbddeliminadaanchor.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/bbddeliminadaanchor.png" />
 
 Vemos como efectivamente hemos eliminado correctamente la base de datos.
 
@@ -1162,7 +1162,7 @@ return [
 
 Hecho esto, vamos a reiniciar nuestro servidor web y a comprobar que nuestro CMS vuelve a funcionar:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/bbddremotaanchor.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/bbddremotaanchor.png" />
 
 La respuesta es afirmativa, por tanto habríamos terminado el ejercicio.
 
@@ -1241,6 +1241,6 @@ Acabamos de lanzar nuestra página en *Pico*, si queremos visualizarla en nuestr
 
 Nos dirigimos a la web `www.javierperezhidalgopico.org`:
 
-![.](images/iaw_instalacion_local_de_un_cms_php/pico.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/iaw_instalacion_local_de_un_cms_php/pico.png" />
 
 Ya hemos instalado *Pico* y habríamos terminado con este *post*.

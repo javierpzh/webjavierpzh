@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-VirtualHosting con Apache
-Date: 2020/10/14
-Category: Servicios de Red e Internet
-Header_Cover: theme/images/banner-servicios.jpg
-Tags: virtualhosting, Apache, web
 
 ## Configuración de VirtualHosting
 
@@ -121,10 +116,9 @@ La IP obviamente depende de la cual tengamos asignada a la mv.
 
 Voy a abrir las páginas desde el cliente.
 
-![.](images/sri_virtualhosting_apache/iesgn_web.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_virtualhosting_apache/iesgn_web.png" />
 
-![.](images/sri_virtualhosting_apache/departamentos_web.png)
-
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_virtualhosting_apache/departamentos_web.png" />
 
 
 **Repite el ejercicio cambiando los directorios de trabajo a `/srv/www`. ¿Qué modificación debes hacer en el fichero `/etc/apache2/apache2.conf`?**

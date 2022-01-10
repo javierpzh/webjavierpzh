@@ -300,7 +300,7 @@ SQL> GRANT ALL PRIVILEGES TO c##javierserv2;
 Concesi¾n terminada correctamente.
 </pre>
 
-Vamos a crear la tabla **Empleados**, que será la que consultaremos luego a partir de este [script](images/abd_interconexiones_de_servidores_de_bases_de_datos/scriptoracle.txt).
+Vamos a crear la tabla **Empleados**, que será la que consultaremos luego a partir de este [script](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_interconexiones_de_servidores_de_bases_de_datos/scriptoracle.txt).
 
 Ahora sí, vamos a crear el propio enlace.
 
@@ -545,7 +545,7 @@ GRANT
 postgres=# exit
 </pre>
 
-Una vez creados ambos usuarios y ambas bases de datos, inserto una serie de tablas con sus respectivos registros. Puedes encontrar la información [aquí](images/abd_interconexiones_de_servidores_de_bases_de_datos/scriptpostgresql.txt).
+Una vez creados ambos usuarios y ambas bases de datos, inserto una serie de tablas con sus respectivos registros. Puedes encontrar la información [aquí](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_interconexiones_de_servidores_de_bases_de_datos/scriptpostgresql.txt).
 
 Hecho esto, llegó el momento de crear los enlaces entre ambos servidores. Los enlaces deben crearse con el usuario administrador **postgres** ya que es el usuario que posee los permisos para ello, y deben crearse en las bases de datos **empresaX**, ya que los usuarios **javierservX**, solo poseen permisos sobre ellas.
 

@@ -4,7 +4,7 @@ layout: post
 
 **En esta tarea se va a crear el escenario de trabajo que se va a usar durante todo el curso, que va a constar inicialmente de 3 instancias con nombres relacionados con el libro "Don Quijote de la Mancha".**
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/escenario.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/escenario.png" />
 
 **Pasos a realizar:**
 
@@ -25,19 +25,19 @@ Una vez estemos dentro de nuestro gestor de proyectos de **OpenStack**, empezare
 
 Se nos abre esta ventana en la que estableceremos la configuración de la nueva red:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/red.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/red.png" />
 
 Indicamos la dirección de la red y deshabilitamos la puerta de enlace ya que no nos va hacer falta debido a que vamos a poner a *Dulcinea* como *gateway*:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/redsubred.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/redsubred.png" />
 
 Dejamos marcada la opción de **Habilitar DHCP** que viene de manera predeterminada, para que de esta forma, nos dé una dirección IP de manera automática cuando levantemos las instancias.
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/confirmarred.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/confirmarred.png" />
 
 Y esta sería la red que hemos creado:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/redcreada.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/redcreada.png" />
 
 **2. Creación de las instancias:**
 
@@ -51,31 +51,31 @@ Vamos a realizar el proceso de la creación de **Dulcinea**. Esta máquina hará
 
 Vamos a crear las instancias a partir de un volumen con una imagen, por tanto, creamos el volumen:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/volumenDulcinea.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/volumenDulcinea.png" />
 
 *Dulcinea* incorporará un sistema **Debian Buster 10.6**.
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/volumenDulcineacreado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/volumenDulcineacreado.png" />
 
 Una vez hemos creado el volumen, podemos crear la instancia a partir de éste. Asignamos un nombre a la instancia:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/dulcineanombre.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/dulcineanombre.png" />
 
 Establecemos que el origen de arranque sea el volumen creado previamente:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/dulcineaasociovolumen.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/dulcineaasociovolumen.png" />
 
 Como **Sabor** indicamos que tenga un **m1.mini**.
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/dulcineasabor.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/dulcineasabor.png" />
 
 Y por último, le asignamos las redes a las que va a pertenecer esta máquina.
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/dulcineared.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/dulcineared.png" />
 
 *Dulcinea* necesita conectividad al exterior, ya que con ella vamos a hacer NAT, por tanto le asignamos una IP flotante. El resultado de la máquina creada sería este:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/dulcineacreada.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/dulcineacreada.png" />
 
 Comprobamos que nos podemos conectar a *Dulcinea* mediante nuestro par de claves, ya que tengo configurado para que todas las instancias que se creen posean mi clave pública, para así yo poder identificarme con mi clave privada. Introduzco la opción `-A`, que sirve para que la máquina *Dulcinea*, nos herede las claves de la primera, de forma que así podremos establecer una conexión mediante el par de claves con las máquinas *Sancho* y *Quijote*.
 
@@ -107,11 +107,11 @@ Vamos a repetir el mismo proceso para crear la máquina *Sancho* que incorporar�
 
 Creamos el volumen:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/volumenSanchocreado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/volumenSanchocreado.png" />
 
 El resultado de la instancia creada sería este:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/sanchocreada.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/sanchocreada.png" />
 
 Comprobamos que desde *Dulcinea* nos podemos conectar a esta nueva máquina:
 
@@ -166,11 +166,11 @@ Y por último repetimos el proceso para crear a **Quijote** que incorporará un 
 
 Creamos el volumen:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/volumenQuijotecreado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/volumenQuijotecreado.png" />
 
 El resultado de la instancia creada sería este:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/quijotecreada.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/quijotecreada.png" />
 
 Comprobamos que desde *Dulcinea* nos podemos conectar a esta nueva máquina:
 
@@ -216,7 +216,7 @@ Una vez estemos en nuestro entorno virtual, vamos a realizar la instalación del
 
 Una vez tenemos instalado este paquete, nos quedaría vincular nuestra cuenta. Para llevar a cabo el proceso de vinculación, debemos dirigirnos desde el navegador hacia el gestor de nuestro proyecto, e irnos al apartado de **Acceso y seguridad** y **Acceso a la API**. Obtendremos esta salida:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/accesoalaAPI.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/accesoalaAPI.png" />
 
 Podemos observar que nos muestra unos ficheros para descargar, debemos hacer click en el llamado **Descargar fichero RC de OpenStack v3**. Una vez descargado, lo movemos al directorio donde hemos creado el entorno virtual.
 
@@ -796,11 +796,11 @@ Pero nos encontramos con que no podemos apreciar ningún apartado que nos indiqu
 
 Dicho esto, nos dirigimos a nuestro proyecto de *OpenStack* en el navegador, a este apartado:
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/redinternajavier.perezh.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/redinternajavier.perezh.png" />
 
 Seleccionamos la opción **Editar subred**, y se nos abrirá esta ventana en la que tendremos que desmarcar la opción llamada **Habilitar DHCP**.
 
-![.](images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/dhcpdesactivado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_creacion_del_escenario_de_trabajo_en_OpenStack/dhcpdesactivado.png" />
 
 Guardamos los cambios y ya tendríamos deshabilitado el servidor DHCP de nuestra red interna.
 

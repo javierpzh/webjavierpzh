@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-Servidor Web Nginx
-Date: 2020/11/8
-Category: Servicios de Red e Internet
-Header_Cover: theme/images/banner-servicios.jpg
-Tags: web, Nginx, mapear, virtualhosting
 
 ## Servidor Web Nginx
 
@@ -86,7 +81,7 @@ Hemos accedido a la instancia.
 
 Antes de instalar el servidor web, en nuestro administrador de instancias, en mi caso, estoy utilizando una instancia del servicio de *cloud* de mi instituto, debemos abrir el **puerto 80 (HTTP)**, ya que sino no nos va a dejar acceder a las páginas que configuremos.
 
-![.](images/sri_servidor_web_nginx/puerto80.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/puerto80.png" />
 
 Para instalar el servidor **Nginx**, voy a realizar una actualización de los repositorios, es decir, un `apt update`, pero si intentamos realizarlo, nos da un error que sinceramente desconozco el por qué, pero que he solventado comentando las líneas `src` en el fichero `/etc/apt/sources.list`.
 
@@ -200,11 +195,11 @@ Si queremos visualizar las páginas en nuestra máquina anfitriona, añadimos es
 
 Página `www.iesgn.org`:
 
-![.](images/sri_servidor_web_nginx/paginaiesgn.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/paginaiesgn.png" />
 
 Página `departamentos.iesgn.org`:
 
-![.](images/sri_servidor_web_nginx/paginadepartamentos.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/paginadepartamentos.png" />
 
 
 #### Mapeo de URL
@@ -277,11 +272,11 @@ systemctl restart nginx
 
 Vamos a acceder a la página `www.iesgn.org`:
 
-![.](images/sri_servidor_web_nginx/nolistado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/nolistado.png" />
 
 Vemos como además de redirigirnos automáticamente a `www.iesgn.org/principal`, no nos muestra el listado de ficheros. Si probamos a acceder a `www.iesgn.org/principal/ejemplo1.txt`, para ver si nos permite seguir el enlace simbólico:
 
-![.](images/sri_servidor_web_nginx/noenlacessimbolicos.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/noenlacessimbolicos.png" />
 
 Vemos que tampoco nos deja, por tanto tendríamos la página bien configurada. Ahora vamos a añadir un `index.html`:
 
@@ -293,7 +288,7 @@ root@deb10-servidornginx:/srv/www/iesgn# chown -R www-data:www-data /srv/www
 
 Si ahora accedemos a la ruta `www.iesgn.org` nos redirigirá automáticamente a `www.iesgn.org/principal` y nos mostrará está página:
 
-![.](images/sri_servidor_web_nginx/paginaprincipal.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/paginaprincipal.png" />
 
 **4. Si accedes a la página `www.iesgn.org/principal/documentos` se visualizarán los documentos que hay en `/srv/doc`. Por lo tanto se permitirá el listado de fichero y el seguimiento de enlaces simbólicos siempre que sean a ficheros o directorios cuyo dueño sea el usuario. Muestra al profesor el funcionamiento.**
 
@@ -326,11 +321,11 @@ location /principal/documentos {
 
 Accedemos a `www.iesgn.org/principal/documentos`:
 
-![.](images/sri_servidor_web_nginx/listaficheros.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/listaficheros.png" />
 
 Vemos que podemos ver el contenido de los ficheros:
 
-![.](images/sri_servidor_web_nginx/ejemplo1txt.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/ejemplo1txt.png" />
 
 **5. En todo el host virtual se debe redefinir los mensajes de error de objeto no encontrado y no permitido. Para el ello se crearan dos ficheros html dentro del directorio error. Entrega las modificaciones necesarias en la configuración y una comprobación del buen funcionamiento.**
 
@@ -368,11 +363,11 @@ systemctl restart nginx
 
 Si ahora accedemos a `www.iesgn.org/principal/noexiste`:
 
-![.](images/sri_servidor_web_nginx/error404.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/error404.png" />
 
 Si accedemos a `www.iesgn.org/principal/ejemplo1.txt` (recordemos que antes configuramos que en esta página no se pudieran seguir los enlaces simbólicos):
 
-![.](images/sri_servidor_web_nginx/error403.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/error403.png" />
 
 #### Autentificación, Autorización, y Control de Acceso
 
@@ -382,7 +377,7 @@ Vamos a crear una nueva *mv*, en mi caso voy a crear una nueva instancia en *Ope
 
 Aquí vemos el resultado:
 
-![.](images/sri_servidor_web_nginx/instancia2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/instancia2.png" />
 
 Ahora vamos a crear las páginas `departamentos.iesgn.org/intranet` y `departamentos.iesgn.org/internet`, para ello creamos los directorios `/srv/www/departamentos/intranet` y `/srv/www/departamentos/internet`, y sus respectivos `index.html`:
 
@@ -424,11 +419,11 @@ systemctl restart nginx
 
     - Accedemos a `departamentos.iesgn.org/internet`:
 
-    ![.](images/sri_servidor_web_nginx/anfitrionainternet.png)
+    <img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/anfitrionainternet.png" />
 
     - Accedemos a `departamentos.iesgn.org/intranet`:
 
-    ![.](images/sri_servidor_web_nginx/anfitrionaintranet.png)
+    <img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/anfitrionaintranet.png" />
 
 Vemos como nos deja acceder a la web `/internet` pero no a la web `/intranet`.
 
@@ -509,11 +504,11 @@ lynx departamentos.iesgn.org/intranet
 
     - Accedemos a `departamentos.iesgn.org/internet`:
 
-    ![.](images/sri_servidor_web_nginx/redlocalinternet.png)
+    <img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/redlocalinternet.png" />
 
     - Accedemos a `departamentos.iesgn.org/intranet`:
 
-    ![.](images/sri_servidor_web_nginx/redlocalintranet.png)
+    <img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/redlocalintranet.png" />
 
 Vemos como nos deja acceder a la web `/intranet` pero no a la web `/internet`.
 
@@ -567,17 +562,17 @@ systemctl restart nginx
 
 Accedemos a `departamentos.iesgn.org/secreto/`:
 
-![.](images/sri_servidor_web_nginx/autentificacion.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/autentificacion.png" />
 
 Vemos como nos pide unas credenciales para confirmar que estamos autorizados a visualizar esta web. Si introducimos los datos correctos:
 
-![.](images/sri_servidor_web_nginx/autentificacioncompletada.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/autentificacioncompletada.png" />
 
 Al parecer todo es seguro y está bien, pero, ¿qué es lo último que deseamos cuando nos *logueamos* en una web? Exacto, que nuestras credenciales y nuestros datos no se conozcan y sean seguros, pues la **autenticación básica** no cuida esto, sino que envía nuestras contraseñas sin ningún tipo de cifrado y al descubierto, por lo que estamos totalmente expuestos.
 
 He hecho una prueba capturando el tráfico, en la que podemos ver como cualquiera que esté escuchando el tráfico de la red, podría ver nuestros datos.
 
-![.](images/sri_servidor_web_nginx/trafico.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/trafico.png" />
 
 Si nos fijamos en la línea seleccionada, que hace referencia a la petición que hemos hecho con nuestras credenciales, podemos ver como nos muestra la contraseña.
 
@@ -601,10 +596,10 @@ La opción **satisfy any** indica que debe cumplirse al menos un bloque para acc
 
 - **Máquina anfitriona conectada a internet:**
 
-![.](images/sri_servidor_web_nginx/autentificacion.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/autentificacion.png" />
 
 - **Máquina conectada a la red local:**
 
-![.](images/sri_servidor_web_nginx/autentificacionautomatica.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sri_servidor_web_nginx/autentificacionautomatica.png" />
 
 Vemos como desde la máquina que accede desde *internet* nos pide la autenticación, mientras que desde la máquina que accede desde la *intranet* lo hace de manera automática.

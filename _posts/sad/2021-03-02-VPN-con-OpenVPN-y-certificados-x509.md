@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-VPN con OpenVPN y certificados x509
-Date: 2021/03/02
-Category: Seguridad y Alta Disponibilidad
-Header_Cover: theme/images/banner-vpn.jpg
-Tags: VPN, OpenVPN, Site-to-Site
 
 ## ¿Qué es una VPN?
 
@@ -27,8 +22,8 @@ En el siguiente supuesto práctico vamos a interconectar dos máquinas que está
 
 He creado los siguientes escenarios:
 
-- **Fichero Vagrantfile Servidor:** [Vagrantfile](images/sad_VPN_con_OpenVPN_y_certificados_x509/Vagrantfileservidor.txt)
-- **Fichero Vagrantfile Cliente:** [Vagrantfile](images/sad_VPN_con_OpenVPN_y_certificados_x509/Vagrantfilecliente.txt)
+- **Fichero Vagrantfile Servidor:** [Vagrantfile](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_VPN_con_OpenVPN_y_certificados_x509/Vagrantfileservidor.txt)
+- **Fichero Vagrantfile Cliente:** [Vagrantfile](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_VPN_con_OpenVPN_y_certificados_x509/Vagrantfilecliente.txt)
 
 ##### Escenario Servidor
 

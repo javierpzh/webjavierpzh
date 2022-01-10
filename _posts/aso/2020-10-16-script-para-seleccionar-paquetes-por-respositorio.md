@@ -41,4 +41,4 @@ Ejecutamos un bucle *for* del comando `dpkg --get-selections | awk '{ print $1  
 
 Ahora lo único que falta es comparar si el repositorio que hemos introducido, es el mismo que el del paquete, si es el mismo muestra el nombre del paquete, y sino no hace nada.
 
-Puedes descargar aquí el [script](images/aso_script_para_seleccionar_paquetes_por_respositorio/paquetesporrepositorio.sh).
+Puedes descargar aquí el [script](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/aso_script_para_seleccionar_paquetes_por_respositorio/paquetesporrepositorio.sh).

@@ -265,7 +265,7 @@ Podemos apreciar que nos muestra todos los datos que fueron creados en el primer
 
 Como última prueba, he preparado un fichero `.ldif` que insertará en el servidor principal, es decir, en *Freston*, una nueva unidad organizativa: **Prueba**.
 
-El contenido de este fichero `prueba.ldif` es el siguiente. Podemos descargar el fichero [aquí](images/aso_configurar_LDAP_en_alta_disponibilidad/prueba.ldif):
+El contenido de este fichero `prueba.ldif` es el siguiente. Podemos descargar el fichero [aquí](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/aso_configurar_LDAP_en_alta_disponibilidad/prueba.ldif):
 
 <pre>
 dn: ou=Prueba,dc=javierpzh,dc=gonzalonazareno,dc=org

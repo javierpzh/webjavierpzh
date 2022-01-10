@@ -16,31 +16,31 @@ Una vez descargado el archivo *.zip*, tenemos que extraerlo y ahora empezaremos 
 
 Debemos buscar en el directorio resultante este ejecutable llamado **setup**:
 
-![.](abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_setup.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_setup.png" />
 
 Lo abrimos con permisos de administrador y se nos abrirá esta ventana que quedará cargando:
 
-![.](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_setupcargando.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_setupcargando.png" />
 
 Una vez haya terminado de cargar el instalador de *Oracle*, se nos abrirá este asistente en el que configuraremos todos los parámetros de los que queremos disponer en nuestro nuevo servidor de base de datos.
 
-![.](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_instalacion1.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_instalacion1.png" />
 
 Seleccionamos de que tipo de sistema queremos disponer, en mi caso, selecciono la *clase de escritorio* ya que, si seleccionara la *case servidor*, el propio *Oracle* nos realizaría todo el proceso de configuración para el acceso remoto, y esto prefiero mostrar como hacerlo manualmente.
 
-![.](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_instalacion2.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_instalacion2.png" />
 
 Este paso es bastante importante, pues debemos establecer la contraseña de administrador que poseerá nuestro nuevo *Oracle*:
 
-![.](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_instalacion4.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_instalacion4.png" />
 
 En este punto, nos redacta un resumen de las preferencias que hemos escogido, y después de esto, ya comenzará el proceso de instalación:
 
-![.](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_instalacion5.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_instalacion5.png" />
 
 Una vez terminada la instalación, obtendremos esta ventana:
 
-![.](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_instalacion6.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/oracle_instalacion6.png" />
 
 Bien, ya hemos instalado el servidor *Oracle* en nuestro sistema, vamos a acceder a él. Para ello vamos a abrir la aplicación **SQLPlus**. También podemos acceder a través de nuestro **cmd** con el comando:
 
@@ -82,7 +82,7 @@ SQL>
 
 Con esto, ya tenemos nuestro usuario disponible.
 
-Voy a acceder a él y a crear una serie de tablas de prueba y a insertarle unos pocos registros a partir de este [script](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/scriptoracle.txt).
+Voy a acceder a él y a crear una serie de tablas de prueba y a insertarle unos pocos registros a partir de este [script](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/scriptoracle.txt).
 
 Hecho esto, es el momento de acceder a este servidor de manera remota.
 
@@ -772,7 +772,7 @@ Database changed
 MariaDB [empresa]>
 </pre>
 
-En esta base de datos voy a crear una serie de tablas y a introducirle unos registros de prueba a través de este [script](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/scriptmysql.txt).
+En esta base de datos voy a crear una serie de tablas y a introducirle unos registros de prueba a través de este [script](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/scriptmysql.txt).
 
 Vemos las tablas y algunos de los registros creados:
 
@@ -866,7 +866,7 @@ You are now connected to database "empresa" as user "debian".
 empresa=#
 </pre>
 
-Vamos a crear unas tablas y unos registros, para ello, utilizamos el siguiente [script](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/scriptpostgresql.txt).
+Vamos a crear unas tablas y unos registros, para ello, utilizamos el siguiente [script](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/scriptpostgresql.txt).
 
 Si comprobamos las tablas:
 
@@ -964,7 +964,7 @@ $conf['servers'][1]['port'] = 5432;
 
 Si accedemos a la dirección `.../phppgadmin` en nuestro navegador e iniciamos sesión con las credenciales de nuestro usuario de la base de datos, obtendremos un resultado como éste:
 
-![.](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/postgresqlaplicacionweb.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/postgresqlaplicacionweb.png" />
 
 Podemos ver como nuestra aplicación nos muestra las bases de datos existentes en el servidor, y podemos eliminarlas, modificarlas y establecer privilegios, entre otras cosas, ya que también podemos realizar consultas, ...
 
@@ -1152,7 +1152,7 @@ MongoDB server version: 4.4.2
 switched to db empresa_mongodb
 </pre>
 
-Es el momento de crear algunas *colecciones* e insertarle algunos *documentos*. Lo llevaré a cabo a través de este [script](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/scriptmongodb.txt).
+Es el momento de crear algunas *colecciones* e insertarle algunos *documentos*. Lo llevaré a cabo a través de este [script](https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/scriptmongodb.txt).
 
 En este punto, vamos a configurar el acceso remoto para intentar acceder a estos datos desde la máquina **cliente**.
 
@@ -1259,7 +1259,7 @@ Una vez instalado, ya podemos abrir la aplicación.
 
 Una vez en ella, nos aparecerá una ventana como esta:
 
-![.](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/compass.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/compass.png" />
 
 Vemos que nos aparece un recuadro, aquí es donde debemos introducir el comando para conectarnos a nuestro servidor remoto. Para ello, utilizamos este comando:
 
@@ -1277,6 +1277,6 @@ mongodb://javier:********@192.168.0.39:27017/?authSource=admin&readPreference=pr
 
 Hecho esto, ya tendremos configurado el acceso remoto a nuestro servidor. Como podemos ver, tenemos acceso a todos los datos:
 
-![.](images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/compassdatos.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/abd_instalacion_de_servidores_y_clientes_de_bases_de_datos/compassdatos.png" />
 
 Hemos finalizado el ejercicio.

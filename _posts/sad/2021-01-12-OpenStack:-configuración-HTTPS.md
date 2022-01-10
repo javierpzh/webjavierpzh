@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-OpenStack: Configuración HTTPS
-Date: 2021/01/12
-Category: Seguridad y Alta Disponibilidad
-Header_Cover: theme/images/banner-seguridad.jpg
-Tags: OpenStack, HTTPS
 
 **En este *post* vamos a configurar de forma adecuada el protocolo HTTPs en nuestro servidor web para nuestra aplicaciones web. Para ello vamos a emitir un certificado *wildcard* en la entidad certificadora [Gonzalo Nazareno](https://blogsaverroes.juntadeandalucia.es/iesgonzalonazareno/).**
 
@@ -185,12 +180,12 @@ Yo lo haré sobre *Mozilla Firefox*, pero es bastante parecido en los demás nav
 
 Nos dirigimos a **Preferencias**, a la sección **Privacidad & Seguridad**, y al apartado **Certificados**, *clickamos* en **Ver certificados** y nos sale una ventana como esta:
 
-![.](images/sad_OpenStack_configuración_HTTPS/importar.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_OpenStack_configuración_HTTPS/importar.png" />
 
 Seleccionamos **Importar ...**, e importamos el certificado de la *CA*, seleccionando los permisos para confiar en esta entidad.
 
 Ya hemos importado el certificado de la entidad, y si ahora nos dirigimos a la web `https://www.javierpzh.gonzalonazareno.org`.
 
-![.](images/sad_OpenStack_configuración_HTTPS/webhttps.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_OpenStack_configuración_HTTPS/webhttps.png" />
 
 Podemos ver como efectivamente estamos haciendo uso del protocolo HTTPs, por lo que habríamos terminado este *post*.

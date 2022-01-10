@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-Let's Encrypt HTTPS
-Date: 2020/11/30
-Category: Seguridad y Alta Disponibilidad
-Header_Cover: theme/images/banner-seguridad.jpg
-Tags: HTTPS, Let's Encrypt
 
 #### Vamos a configurar el protocolo HTTPS para el acceso a nuestras aplicaciones, para ello tienes que tener en cuenta los siguiente.
 
@@ -232,25 +227,25 @@ Estas líneas lo que hacen es comprobar cada 12 horas como indica ahí, (12 hora
 
 Accedemos a `www.iesgn15.es`:
 
-![.](images/sad_lets_encrypt_HTTPS/www.iesgn15.es.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_lets_encrypt_HTTPS/www.iesgn15.es.png" />
 
 Accedemos a `portal.iesgn15.es`:
 
-![.](images/sad_lets_encrypt_HTTPS/portal.iesgn15.es.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_lets_encrypt_HTTPS/portal.iesgn15.es.png" />
 
 Accedemos a `www.iesgn15.es/cloud`, que es la dirección de la aplicación *Nextcloud*:
 
-![.](images/sad_lets_encrypt_HTTPS/nextcloud.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_lets_encrypt_HTTPS/nextcloud.png" />
 
 Si vemos los detalles del certificado:
 
-![.](images/sad_lets_encrypt_HTTPS/certificado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_lets_encrypt_HTTPS/certificado.png" />
 
 **7. Modifica la configuración del cliente de *Nextcloud* para comprobar que sigue en funcionamiento con *HTTPS*.**
 
 Nos dirigimos ahora a nuestro cliente de *Nextcloud*, que recordemos que está configurado para la dirección `http://www.iesgn15.es/cloud`:
 
-![.](images/sad_lets_encrypt_HTTPS/nextcloudcliente.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_lets_encrypt_HTTPS/nextcloudcliente.png" />
 
 Vemos como a pesar de no estar configurado para que use *HTTPS*, nos redirige automáticamente gracias a la redirección permanente que hemos creado, por tanto no haría falta volver a configurarlo.
 

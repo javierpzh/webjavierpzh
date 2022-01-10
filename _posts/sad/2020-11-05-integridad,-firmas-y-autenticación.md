@@ -1,11 +1,6 @@
 ---
 layout: post
 ---
-Integridad, firmas y autenticación
-Date: 2020/11/05
-Category: Seguridad y Alta Disponibilidad
-Header_Cover: theme/images/banner-seguridad.jpg
-Tags: GPG, cifrado, firmado, integridad, apt secure, SSH
 
 ## Tarea 1: Firmas electrónicas
 
@@ -184,7 +179,7 @@ con su clave: "Javier Pérez Hidalgo <javierperezhidalgo01@gmail.com>" (6F7A456B
 
 Verificamos que queremos firmar la clave:
 
-![.](images/sad_integridad_firmas_y_autenticacion/firmarclave.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_integridad_firmas_y_autenticacion/firmarclave.png" />
 
 <pre>
 gpg> save
@@ -499,7 +494,7 @@ He añadido y sincronizado mi cuenta de correo electrónico `javierperezhidalgo0
 
 Para asociar nuestra clave a esta cuenta de correo, nos desplazamos hasta las opciones de seguridad. Para ello, en la pestaña **Editar**, entramos en **Preferencias**, seleccionamos nuestra cuenta de correo y hacemos click en **Editar** y se nos abrirá un menú como este, en el que introduciremos nuestra clave:
 
-![.](images/sad_integridad_firmas_y_autenticacion/clavecorreo.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_integridad_firmas_y_autenticacion/clavecorreo.png" />
 
 Vemos que debajo del campo de la clave, nos aparecen estos dos apartados:
 
@@ -513,23 +508,23 @@ Ya habríamos configurado el cliente para enviar correos firmados y cifrados.
 
 Voy a realizar una prueba de enviar un correo firmado. Previamente he marcado la primera opción mencionada antes.
 
-![.](images/sad_integridad_firmas_y_autenticacion/correofirmado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_integridad_firmas_y_autenticacion/correofirmado.png" />
 
 Nos pide la verificación de la clave:
 
-![.](images/sad_integridad_firmas_y_autenticacion/verificacioncorreofirmado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_integridad_firmas_y_autenticacion/verificacioncorreofirmado.png" />
 
 Se lo he enviado a mi compañero Álvaro, y este es el resultado que ha recibido él:
 
-![.](images/sad_integridad_firmas_y_autenticacion/resultadocorreofirmado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_integridad_firmas_y_autenticacion/resultadocorreofirmado.png" />
 
 Ahora voy a realizar una prueba de enviar un correo cifrado. Previamente he marcado la segunda opción mencionada antes.
 
-![.](images/sad_integridad_firmas_y_autenticacion/correocifrado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_integridad_firmas_y_autenticacion/correocifrado.png" />
 
 Se lo he enviado a mi compañero Álvaro, y este es el resultado que ha recibido él:
 
-![.](images/sad_integridad_firmas_y_autenticacion/resultadocorreocifrado.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/sad_integridad_firmas_y_autenticacion/resultadocorreocifrado.png" />
 
 Si nos fijamos en el resultado de ambos, el correo firmado nos dice que no está cifrado, y el cifrado que no está firmado, pero porque he decidido hacerlo así, pero que sepamos que ambas opciones las podemos combinar sin ningún problema.
 

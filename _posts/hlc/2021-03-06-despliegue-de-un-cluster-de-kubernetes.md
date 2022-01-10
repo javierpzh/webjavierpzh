@@ -21,7 +21,7 @@ Entre las herramientas que nos proporciona se incluye **kubectl**. Esta herramie
 
 A continuación podemos ver un diagrama acerca de la estructura interna de *k3s*:
 
-![.](images/hlc_despliegue_de_un_cluster_de_kubernetes/estructurainterna.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_despliegue_de_un_cluster_de_kubernetes/estructurainterna.png" />
 
 
 ## Instalación de k3s en el controlador
@@ -140,8 +140,8 @@ Finalizada la instalación en ambos *workers*, vamos a listar los nodos existent
 root@controlador:~# kubectl get nodes
 NAME          STATUS   ROLES                  AGE     VERSION
 controlador   Ready    control-plane,master   8m25s   v1.20.4+k3s1
-worker1       Ready    <none>                 81s     v1.20.4+k3s1
-worker2       Ready    <none>                 51s     v1.20.4+k3s1
+worker1       Ready    none                   81s     v1.20.4+k3s1
+worker2       Ready    none                   51s     v1.20.4+k3s1
 </pre>
 
 Podemos ver como efectivamente, ahora sí nos muestra los dos *workers* que acabamos de vincular.
@@ -221,8 +221,8 @@ Tras él, volvemos a intentar listar los nodos:
 root@debian:~# kubectl get nodes
 NAME          STATUS     ROLES                  AGE   VERSION
 controlador   Ready      control-plane,master   37m   v1.20.4+k3s1
-worker1       Ready      <none>                 30m   v1.20.4+k3s1
-worker2       Ready      <none>                 30m   v1.20.4+k3s1
+worker1       Ready      none                   30m   v1.20.4+k3s1
+worker2       Ready      none                   30m   v1.20.4+k3s1
 </pre>
 
 Efectivamente podemos ver los tanto el nodo maestro como los *workers* por lo que ya podríamos gestionar nuestro *cluster* de manera remota.
@@ -316,8 +316,8 @@ replicaset.apps/mongo-5c694c878b      1         1         1       34m   mongo   
 replicaset.apps/letschat-7c66bd64f5   1         1         1       30m   letschat     sdelements/lets-chat   name=letschat,pod-template-hash=7c66bd64f5
 
 NAME                            READY   STATUS    RESTARTS   AGE    IP          NODE      NOMINATED NODE   READINESS GATES
-pod/mongo-5c694c878b-bwhsr      1/1     Running   0          34m    10.42.1.3   worker1   <none>           <none>
-pod/letschat-7c66bd64f5-467dp   1/1     Running   0          105s   10.42.2.3   worker2   <none>           <none>
+pod/mongo-5c694c878b-bwhsr      1/1     Running   0          34m    10.42.1.3   worker1    none             none
+pod/letschat-7c66bd64f5-467dp   1/1     Running   0          105s   10.42.2.3   worker2    none             none
 </pre>
 
 Y para comprobar que los *servicios* han sido correctamente creados, vamos a utilizar este comando:
@@ -325,9 +325,9 @@ Y para comprobar que los *servicios* han sido correctamente creados, vamos a uti
 <pre>
 root@debian:/home/javier/Kubernetes/kubernetes-storm/unidad3/ejemplos-3.2/ejemplo8# kubectl get svc
 NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
-kubernetes   ClusterIP   10.43.0.1      <none>        443/TCP          96m
-mongo        ClusterIP   10.43.108.67   <none>        27017/TCP        8m14s
-letschat     NodePort    10.43.5.244    <none>        8080:32094/TCP   111s
+kubernetes   ClusterIP   10.43.0.1       none         443/TCP          96m
+mongo        ClusterIP   10.43.108.67    none         27017/TCP        8m14s
+letschat     NodePort    10.43.5.244     none         8080:32094/TCP   111s
 </pre>
 
 En este momento, ya tendríamos disponible nuestra aplicación y podríamos acceder a ella. Para ello nos dirigiremos a nuestro navegador e introduciremos la dirección IP del nodo maestro, pero además de esto, debemos indicar el puerto donde se está sirviendo *Let's Chat*. Para conocer este puerto, que por defecto nos lo asigna en el rango comprendido entre 30000 y 40000, podemos utilizar el siguiente comando:
@@ -340,7 +340,7 @@ NodePort:                 http  32094/TCP
 
 Podemos ver como, en mi caso, está utilizando el puerto 32094, por tanto yo introduciré en mi navegador la dirección `172.22.201.59:32094`:
 
-![.](images/hlc_despliegue_de_un_cluster_de_kubernetes/letschat.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_despliegue_de_un_cluster_de_kubernetes/letschat.png" />
 
 ¡Vaya! Aquí podemos ver como efectivamente poseemos nuestra aplicación.
 
@@ -364,7 +364,7 @@ Parece que se ha generado el nuevo *ingress*, pero vamos a comprobarlo listando 
 <pre>
 root@debian:/home/javier/Kubernetes/kubernetes-storm/unidad3/ejemplos-3.2/ejemplo8# kubectl get ingress
 NAME               CLASS    HOSTS              ADDRESS     PORTS   AGE
-ingress-letschat   <none>   www.letschat.com   10.0.0.13   80      30s
+ingress-letschat    none    www.letschat.com   10.0.0.13   80      30s
 </pre>
 
 Podemos apreciar como efectivamente se ha creado el *ingress* y ahora está utilizando el puerto 80.
@@ -377,7 +377,7 @@ Por último, añadiremos la línea relativa al nodo maestro en nuestro fichero `
 
 Hecho esto, nos dirigimos a nuestro navegador e introducimos la dirección `www.letschat.com`:
 
-![.](images/hlc_despliegue_de_un_cluster_de_kubernetes/letschat80.png)
+<img src="https://raw.githubusercontent.com/javierpzh/webjavierpzh/master/assets/img/images/hlc_despliegue_de_un_cluster_de_kubernetes/letschat80.png" />
 
 ¡Bien! Ahora podremos acceder a *Let's Chat* siempre que queramos en la dirección `www.letschat.com`.
 
@@ -404,11 +404,11 @@ Vamos a ver ahora los *pods* existentes en nuestro *cluster*:
 <pre>
 root@debian:/home/javier/Kubernetes/kubernetes-storm/unidad3/ejemplos-3.2/ejemplo8# kubectl get po -o wide
 NAME                        READY   STATUS    RESTARTS   AGE    IP           NODE          NOMINATED NODE   READINESS GATES
-mongo-5c694c878b-m9zss      1/1     Running   0          240m   10.42.0.29   controlador   <none>           <none>
-letschat-7c66bd64f5-hvh7r   1/1     Running   0          208m   10.42.0.30   controlador   <none>           <none>
-letschat-7c66bd64f5-vtghs   1/1     Running   0          80s    10.42.1.8    worker2       <none>           <none>
-letschat-7c66bd64f5-bflgh   1/1     Running   0          64s    10.42.1.9    worker2       <none>           <none>
-letschat-7c66bd64f5-pl4gx   1/1     Running   0          4s     10.42.2.8    worker1       <none>           <none>
+mongo-5c694c878b-m9zss      1/1     Running   0          240m   10.42.0.29   controlador    none             none
+letschat-7c66bd64f5-hvh7r   1/1     Running   0          208m   10.42.0.30   controlador    none             none
+letschat-7c66bd64f5-vtghs   1/1     Running   0          80s    10.42.1.8    worker2        none             none
+letschat-7c66bd64f5-bflgh   1/1     Running   0          64s    10.42.1.9    worker2        none             none
+letschat-7c66bd64f5-pl4gx   1/1     Running   0          4s     10.42.2.8    worker1        none             none
 </pre>
 
 Podemos apreciar, como efectivamente el número de *pods* de *Let's Chat* se ha escalado a 4, donde uno de ellos se está ejecutando en el nodo maestro, dos de ellos en el *worker2*, y el último en el *worker1*.
