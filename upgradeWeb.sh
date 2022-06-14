@@ -4,6 +4,7 @@
 
 # Uploads the changes to the source repository
 echo "     UPGRADING THE SOURCE REPOSITORY"
+echo "-------------------------------------------------"
 echo ""
 echo " --> Adding changes"
 git add .
@@ -17,11 +18,13 @@ git push
 # Generates the HTML code
 echo ""
 echo "     GENERATING HTML"
+echo "-------------------------------------------------"
 bin/publish
 
 # Uploads the changes to the repository that serves the web page
 echo ""
 echo "     UPGRADING THE WEB"
+echo "-------------------------------------------------"
 cd _site/
 git checkout version2022
 echo "www.javierpzh.es" > CNAME
