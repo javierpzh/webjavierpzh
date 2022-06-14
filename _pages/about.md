@@ -5,7 +5,7 @@ title: Sobre mí
 
 ### Bienvenid@s al blog personal de Javier Pérez Hidalgo
 
-Realicé el grado superior de **ASIR** (Administrador de Sistemas Informáticos en Red) en los años 2019-2021, en IES Gonzalo Nazareno, en Dos Hermanas (Sevilla) misma ciudad en la que vivo.
+Realicé el grado superior de **ASIR** (Administrador de Sistemas Informáticos en Red) durante los años 2019-2021, en IES Gonzalo Nazareno, en Dos Hermanas (Sevilla) misma ciudad en la que vivo.
 
 Actualmente me encuentro trabajando como **SysAdmin** en **EUIGS (Admiral Group)**.
 
