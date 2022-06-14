@@ -23,6 +23,7 @@ bin/publish
 echo ""
 echo "     UPGRADING THE WEB"
 cd _site/
+git checkout version2022
 git add .
 git commit -am "cambiosweb"
 git push
