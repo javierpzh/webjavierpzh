@@ -5,7 +5,6 @@
 # Uploads the changes to the source repository
 echo "     UPGRADING THE SOURCE REPOSITORY"
 echo "-------------------------------------------------"
-echo ""
 echo " --> Adding changes"
 git add .
 echo ""
@@ -17,11 +16,13 @@ git push
 
 # Generates the HTML code
 echo ""
+echo ""
 echo "     GENERATING HTML"
 echo "-------------------------------------------------"
 bin/publish
 
 # Uploads the changes to the repository that serves the web page
+echo ""
 echo ""
 echo "     UPGRADING THE WEB"
 echo "-------------------------------------------------"
