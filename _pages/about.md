@@ -7,7 +7,7 @@ title: Sobre mí
 
 Realicé el grado superior de **ASIR** (Administrador de Sistemas Informáticos en Red) durante los años 2019-2021, en IES Gonzalo Nazareno, en Dos Hermanas (Sevilla) misma ciudad en la que vivo.
 
-Actualmente me encuentro trabajando como **AWS SysAdmin** en **EUIGS | Admiral Group**.
+Actualmente me encuentro trabajando como **AWS SysAdmin** en **EUIGS** **\|** **Admiral Group**.
 
 Este blog está formado principalmente por las tareas realizadas mientras me encontraba estudiando, con la idea de poder ayudar a más personas que lo puedan necesitar.
 
