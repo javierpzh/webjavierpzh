@@ -24,6 +24,7 @@ echo ""
 echo "     UPGRADING THE WEB"
 cd _site/
 git checkout version2022
+echo "www.javierpzh.es" > CNAME
 git add .
 git commit -am "cambiosweb"
 git push
