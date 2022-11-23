@@ -8,7 +8,7 @@ En este blog no encontráreis ningún tipo de tutorial sobre como añadir este r
 
 ## ¿ Cómo actualizar un AddOn ?
 
-Lo primero que debemos hacer es acceder al menú de **Luar**, simplemente navegamos por nuestra interfaz hasta llegar al icono de este repo y hacemos *click* en él.
+Lo primero que debemos hacer es acceder al menú de **Luar**, simplemente navegamos por nuestra interfaz hasta llegar a la sección llamada **Add-Ons**, aquí tenemos que buscar este repo llamado **Luar** y hacer *click* en él.
 
 Una vez dentro, tendremos que descender hasta el apartado **Herramientas**, donde aparece la opción **Buscar Actualizaciones**. Esta funcionalidad lo que hace es, a raíz de los *AddOns* de *Luar* instalados en nuestro equipo, revisar de cada uno de ellos, cuál es la versión más reciente, y en caso de no coincidir con la versión instalada, nos facilita la actualización, de modo que podamos obtener las novedades de manera muy sencilla.
 

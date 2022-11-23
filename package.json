@@ -13,6 +13,5 @@
     "tailwindcss": "^2.0.2"
   },
   "author": "Abhinav Saxena",
-  "license": "MIT",
-  "dependencies": {}
+  "license": "MIT"
 }
