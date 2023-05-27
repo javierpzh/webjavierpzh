@@ -1,4 +1,4 @@
-# This script uploads the changes to the repositories and upgrades the web
+# This script for Linux uploads the changes to the repositories and upgrades the web
 
 #!/bin/bash
 
