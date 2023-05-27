@@ -27,7 +27,7 @@ Write-Host "-------------------------------------------------" -ForegroundColor 
 cd _site/
 git checkout new_web
 # Write-Host "www.javierpzh.es" > CNAME
-Add-Content -Path .\CNAME -Value "www.javierpzh.es"
+Set-Content -Path .\CNAME -Value "www.javierpzh.es"
 git add .
 git commit -am "cambiosweb"
 git push
