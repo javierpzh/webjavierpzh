@@ -2,7 +2,7 @@
 layout: post
 ---
 
-ñññ En este breve artículo, vamos a ver como actualizar de manera sencilla los *AddOns* del repositorio **Luar** en **Kodi**.
+En este breve artículo, vamos a ver como actualizar de manera sencilla los *AddOns* del repositorio **Luar** en **Kodi**.
 
 En este blog no encontráreis ningún tipo de tutorial sobre como añadir este repositorio a *Kodi*, ya que hay cientos de tutoriales en internet de cómo hacerlo, por lo que no aportaría nada relevante, simplemente voy a explicar como actualizar cualquier *AddOn* de *Luar*.
 
