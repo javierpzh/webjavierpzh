@@ -3,6 +3,5 @@
 .jekyll-cache
 .sass-cache
 _site
-_site_backup
 Gemfile.lock
 node_modules
