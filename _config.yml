@@ -2,7 +2,7 @@ title: javierpzh
 description: > # this means to ignore newlines until "show_excerpts:"
   
 baseurl: "/"
-url: https://www.javierpzh.com # change this URL, this is needed for generating right sitemap
+url: https://www.javierpzh.es # change this URL, this is needed for generating right sitemap
 
 permalink: "/blog/:title/"
 
